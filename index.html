@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODERS - Skill Development Platform</title>
+   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
+   <script src="https://cdn.tailwindcss.com"></script>
+   <style>
+    .quote-mark::before {
+        content: '"';
+        font-size: 4rem;
+        position: absolute;
+        left: 0;
+        top: -1rem;
+        color: #22c55e;
+        font-family: serif;
+    }
+
+    .bg-pattern {
+            background-color: rgb(224, 251, 255);
+            opacity: 0.8;
+            background-image: radial-gradient(#0085a5 0.5px, transparent 0.5px), radial-gradient(#0085a5 0.5px, rgb(224, 251, 255) 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+
+        body {
+            font-family: 'Noto Sans Bengali', sans-serif;
+        }
+        .blog-underline {
+            background: linear-gradient(90deg, transparent 0%, #22c55e 50%, transparent 100%);
+            height: 4px;
+            width: 120px;
+            margin: 8px auto;
+        }
+</style>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Left side -->
+                <div class="flex items-center">
+                    <img src="/assests/logo.png" alt="CODERS Logo" class="h-10">
+                    
+                    <!-- Search bar - hidden on mobile -->
+                    <div class="hidden md:flex items-center ml-8">
+                        <div class="relative">
+                            <input type="text" placeholder="কোর্স সার্চ করুন" 
+                                class="w-[300px] pl-10 pr-4 py-2 border border-gray-300 rounded-full text-sm focus:outline-none focus:border-green-500">
+                            <div class="absolute left-3 top-2.5">
+                                <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right side -->
+                <div class="flex items-center">
+                    <!-- Mobile menu button -->
+                    <button type="button" class="md:hidden bg-white p-2 rounded-md">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+
+                    <!-- Desktop menu -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#" class="text-gray-700 hover:text-green-600">লাইভ কোর্স</a>
+                        <a href="#" class="text-gray-700 hover:text-green-600">ফ্রী কোর্স</a>
+                        <a href="/Blog.html" class="text-gray-700 hover:text-green-600">ব্লগ</a>
+                        <a href="#" class="text-gray-700 hover:text-green-600">সব কোর্স</a>
+                        <a href="/auth/login.html" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700">
+                            লগিন / সাইনআপ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+   <div class="bg-[#d0feff]">
+    <div class="relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="space-y-8">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                            স্কিল ডেভেলপ করে..
+                        </h1>
+                        <h2 class="text-2xl md:text-3xl font-bold text-green-600 mt-4">
+                            স্বপ্নের ক্যারিয়ার নিশ্চিত করুন!
+                        </h2>
+                        <p class="mt-6 text-lg text-gray-600">
+                            সেরা এক্সপার্টদের কাছ থেকে শেখার সুযোগ, আজই শুরু করুন, ভবিষ্যৎ আপনার সাথে!
+                        </p>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors">
+                            সকল কোর্স
+                        </button>
+                        <button class="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg hover:bg-green-50 transition-colors flex items-center gap-2">
+                            শেখা শুরু করুন
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Reviews -->
+                    <div class="flex items-center gap-4">
+                        <div class="flex -space-x-2">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="/placeholder.svg?height=32&width=32" alt="User">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="/placeholder.svg?height=32&width=32" alt="User">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="/placeholder.svg?height=32&width=32" alt="User">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="/placeholder.svg?height=32&width=32" alt="User">
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">1000+ Total Review</p>
+                            <!-- rating  -->
+                            <div class="flex text-[#37c760]">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+
+                <!-- Right Image -->
+                <div class="relative">
+                    <div class="absolute right-0 top-0 w-4/5 h-full bg-green-500 rounded-l-full"></div>
+                    <img src="/assests/banner.png" alt="Student with books" 
+                        class="relative z-10 w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+
+    <!--1st Features Section -->
+    <div class="bg-green-600 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <button class="bg-white flex items-start rounded-xl p-6 hover:bg-gray-100 focus:outline-none">
+                    <div class="text-green-600 mr-4">
+                        <i class="fas fa-book-open text-3xl"></i>
+                    </div>
+                    <h3 class="text-[14px] font-semibold text-left">ইন্ডাস্ট্রি ফোকাসড লাইভ কোর্সেস</h3>
+                </button>
+                
+                <!-- Feature 2 -->
+                <button class="bg-white flex items-start rounded-xl p-6 hover:bg-gray-100 focus:outline-none">
+                    <div class="text-green-600 mr-4">
+                        <i class="fas fa-clipboard-list text-3xl"></i>
+                    </div>
+                    <h3 class="text-[14px] font-semibold text-left">মডিউল ভিত্তিক স্টাডি প্ল্যান</h3>
+                </button>
+                
+                <!-- Feature 3 -->
+                <button class="bg-white flex items-start rounded-xl p-6 hover:bg-gray-100 focus:outline-none">
+                    <div class="text-green-600 mr-4">
+                        <i class="fas fa-users text-3xl"></i>
+                    </div>
+                    <h3 class="text-[14px] font-semibold text-left">এক্সপার্টদের থেকে লাইভে শিখুন</h3>
+                </button>
+                
+                <!-- Feature 4 -->
+                <button class="bg-white flex items-start rounded-xl p-6 hover:bg-gray-100 focus:outline-none">
+                    <div class="text-green-600 mr-4">
+                        <i class="fas fa-video text-3xl"></i>
+                    </div>
+                    <h3 class="text-[14px] font-semibold text-left">ইন্টেন্সিভ জব প্লেসমেন্ট সাপোর্ট</h3>
+                </button>
+                
+            </div>
+        </div>
+    </div>
+
+    <!--2nd Top Categories  -->
+     <div class="h-auto bg-[#e9e7ff] px-4 py-8 md:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Top Categories Section -->
+            <div class="text-center mb-12">
+                <h1 class="text-3xl md:text-4xl font-bold mb-2 relative inline-block">
+                    Top Categories
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-green-400 -mb-1"></div>
+                </h1>
+            </div>
+    
+            <!-- Categories Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+                <!-- Web Development -->
+                <button class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow cursor-pointer flex flex-col items-center justify-center">
+                    <div class="mb-4 text-blue-500">
+                        <i class="fas fa-code text-3xl"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold text-center">Web Development</h3>
+                </button>
+            
+                <!-- Digital Marketing -->
+                <button class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow cursor-pointer flex flex-col items-center justify-center">
+                    <div class="mb-4 text-cyan-500">
+                        <i class="fas fa-rocket text-3xl"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold text-center">Digital Marketing</h3>
+                </button>
+            
+                <!-- App Development -->
+                <button class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow cursor-pointer flex flex-col items-center justify-center">
+                    <div class="mb-4 text-orange-500">
+                        <i class="fas fa-mobile-alt text-3xl"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold text-center">App Development</h3>
+                </button>
+            
+                <!-- Graphic Design -->
+                <button class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow cursor-pointer flex flex-col items-center justify-center">
+                    <div class="mb-4 text-yellow-500">
+                        <i class="fas fa-palette text-3xl"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold text-center">Graphic Design</h3>
+                </button>
+            
+                <!-- Web Analysis -->
+                <button class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow cursor-pointer flex flex-col items-center justify-center">
+                    <div class="mb-4 text-green-500">
+                        <i class="fas fa-chart-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold text-center">Web Analysis</h3>
+                </button>
+            
+                <!-- Web Design -->
+                <button class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow cursor-pointer flex flex-col items-center justify-center">
+                    <div class="mb-4 text-purple-500">
+                        <i class="fas fa-paint-brush text-3xl"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold text-center">Web Design</h3>
+                </button>
+            </div>
+            
+    
+           <!-- CTA Section -->
+        <div class="grid md:grid-cols-2 gap-6 mt-[150px]">
+            <!-- Left CTA -->
+          
+            <div class="relative overflow-visible rounded-3xl bg-gradient-to-r from-blue-200 to-green-200  h-[300px] flex items-center">
+                <div class="flex justify-between items-center w-full">
+                    <img src="assests/human1.png" alt="Student with folder" class="h-[400px] object-contain absolute left-0 bottom-0 z-0">
+                    <div class="flex-1 mr-10 z-10 pl-[297px]"> 
+                        <h2 class="text-3xl font-bold mb-6">Upgrade your skills</h2>
+                        <button class="bg-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-gray-50 transition-colors shadow-sm">
+                            GET STARTED
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+<!-- right CTA -->
+            <div class="relative overflow-visible rounded-3xl bg-gradient-to-r from-green-400 to-green-300  h-[300px] flex items-center">
+                <div class="flex justify-between items-center w-full">
+                    <img src="assests/human2.png" alt="Student with folder" class="h-[400px] object-contain absolute right-0 bottom-0 z-0">
+                    <div class="flex-1 z-10 pr-[200px]"> 
+                        <h2 class="text-3xl font-bold mb-6">Upgrade your skills</h2>
+                        <button class="bg-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-gray-50 transition-colors shadow-sm">
+                            GET STARTED
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+
+     </div>
+
+     <!-- 3rd courses  -->
+
+     <div class="bg-[#efefef] p-4 md:p-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <h1 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">
+                আমাদের কোর্সসমূহ
+                <div class="h-1 w-32 bg-green-500 mx-auto mt-2"></div>
+            </h1>
+    
+            <!-- Course Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- SQA Course Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col justify-between h-full">
+                    <div>
+                        <div class="relative p-1">
+                            <img src="/assests/sqa.png" alt="SQA Course" class="w-full h-56 rounded-lg object-cover p-1">
+                        </div>
+                        <div class="p-1">
+                            <!-- Course Meta -->
+                            <div class="flex justify-between px-4 items-center gap-4 mb-4 text-sm w-full bg-gray-200 rounded-lg transition-colors py-2">
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span>Batch 25</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                    </svg>
+                                    <span>Total Seat 180</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <span>16 Lesson</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4 px-4">SQA: Manual & Automated Testing</h3>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-auto py-6">
+                        <button class="w-80 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
+                            বিস্তারিত দেখি →
+                        </button>
+                    </div>
+                </div>
+    
+                <!-- Java Programming Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col justify-between h-full">
+                    <div>
+                        <div class="relative p-1">
+                            <img src="/assests/java.png" alt="SQA Course" class="w-full h-56 rounded-lg object-cover p-1">
+                        </div>
+                        <div class="p-1">
+                            <!-- Course Meta -->
+                            <div class="flex justify-between px-4 items-center gap-4 mb-4 text-sm w-full bg-gray-200 rounded-lg transition-colors py-2">
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span>Batch 25</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                    </svg>
+                                    <span>Total Seat 180</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <span>16 Lesson</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4 px-4">Java Programming Masterclass for Software Developers</h3>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-auto py-6">
+                        <button class="w-80 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
+                            বিস্তারিত দেখি →
+                        </button>
+                    </div>
+                </div>
+    
+                <!-- UI/UX Design Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col justify-between h-full">
+                    <div>
+                        <div class="relative p-1">
+                            <img src="/assests/design.png" alt="SQA Course" class="w-full h-56 rounded-lg object-cover p-1">
+                        </div>
+                        <div class="p-1">
+                            <!-- Course Meta -->
+                            <div class="flex justify-between px-4 items-center gap-4 mb-4 text-sm w-full bg-gray-200 rounded-lg transition-colors py-2">
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span>Batch 25</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                    </svg>
+                                    <span>Total Seat 180</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <span>16 Lesson</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4 px-4">Complete Web & Mobile Designer in 2025 UI/UX</h3>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-auto py-6">
+                        <button class="w-80 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
+                            বিস্তারিত দেখি →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     </div>
+
+
+
+     <!-- 4th section all courses  -->
+     <div class="bg-white p-4 md:p-8">
+        <div class="max-w-7xl mx-auto">
+           
+            <!-- Course Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- SQA Course Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col justify-between h-full">
+                    <div>
+                        <div class="relative p-1">
+                            <img src="/assests/allcourses1.png" alt="Digital Marketing" class="w-full h-56 rounded-lg object-cover p-1">
+                        </div>
+                        <div class="p-1">
+                            <!-- Course Meta -->
+                            <div class="flex justify-between px-4 items-center gap-4 mb-4 text-sm w-full bg-gray-200 rounded-lg transition-colors py-2">
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span>Batch 25</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                    </svg>
+                                    <span>Total Seat 180</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <span>16 Lesson</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4 px-4">The Complete Digital Marketing Course
+                                Besic to Advance</h3>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-auto py-6">
+                        <button class="w-80 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
+                            বিস্তারিত দেখি →
+                        </button>
+                    </div>
+                </div>
+    
+                <!-- Java Programming Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col justify-between h-full">
+                    <div>
+                        <div class="relative p-1">
+                            <img src="/assests/allcourses2.png" alt="Web Development" class="w-full h-56 rounded-lg object-cover p-1">
+                        </div>
+                        <div class="p-1">
+                            <!-- Course Meta -->
+                            <div class="flex justify-between px-4 items-center gap-4 mb-4 text-sm w-full bg-gray-200 rounded-lg transition-colors py-2">
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span>Batch 25</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                    </svg>
+                                    <span>Total Seat 180</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <span>16 Lesson</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4 px-4">Become a WordPress Developer: Unlocking Power With Code</h3>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-auto py-6">
+                        <button class="w-80 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
+                            বিস্তারিত দেখি →
+                        </button>
+                    </div>
+                </div>
+    
+                <!-- UI/UX Design Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col justify-between h-full">
+                    <div>
+                        <div class="relative p-1">
+                            <img src="/assests/allcourses3.png" alt="Data Analysis" class="w-full h-56 rounded-lg object-cover p-1">
+                        </div>
+                        <div class="p-1">
+                            <!-- Course Meta -->
+                            <div class="flex justify-between px-4 items-center gap-4 mb-4 text-sm w-full bg-gray-200 rounded-lg transition-colors py-2">
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span>Batch 25</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                    </svg>
+                                    <span>Total Seat 180</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <span>16 Lesson</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4 px-4">Industry Expert in Data Analytics and Business Intelligence</h3>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-auto py-6">
+                        <button class="w-80 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
+                            বিস্তারিত দেখি →
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+           
+        </div>
+        
+
+        <div class="flex justify-center mt-auto py-12">
+            <button class="w-96 border-solid border-1 border-gray-400 ... py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
+                সব কোর্স দেখুন  →
+            </button>
+        </div>
+     </div>
+      
+    <!-- 5th testimonial  -->
+    <div class="bg-[#0a0f2c] min-h-screen flex items-center justify-center p-16">
+        <div class="w-full max-w-6xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <div class="flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="#00f200">
+                        <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                    </svg>
+                    <h2 class="text-xl font-bold text-[#00f200]">ফিডব্যাক</h2>
+                </div>
+                
+                
+                <h2 class="text-4xl font-bold text-white mb-3">আমাদের লার্নারদের কাছে শুনুন</h2>
+                <div class="flex items-center justify-center">
+                    <p class="text-xl w-96 text-gray-300 text-center">Hear what our students say about their experience</p>
+                </div>
+                
+            </div>
+
+            <!-- Testimonials Section -->
+            <div class="relative overflow-hidden">
+                <div id="carousel" class="flex transition-transform duration-300 ease-in-out">
+                    <!-- Card 1 -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-8">
+                        <div class="bg-white rounded-[2rem] p-8 max-w-md w-full relative">
+                            <!-- Rating Stars -->
+                            <div class="inline-flex gap-0.5 px-2 py-1 bg-[#22c55e] rounded-md absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                    
+                            <!-- Testimonial Text -->
+                            <div class="relative pl-8 mb-8 mt-8">
+                                <blockquote class="quote-mark text-gray-700 text-lg leading-relaxed">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed tincidunt velit. Donec bibendum turpis vitae maximus bibendum.
+                                </blockquote>
+                            </div>
+                    
+                            <!-- Author Info -->
+                            <div class="flex items-center">
+                                <img src="/placeholder.svg?height=48&width=48" alt="Teddy Yu" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Teddy Yu</h4>
+                                    <p class="text-gray-600">SQA: Batch 5</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-8">
+                        <div class="bg-white rounded-[2rem] p-8 max-w-md w-full relative">
+                            <!-- Rating Stars -->
+                            <div class="inline-flex gap-0.5 px-2 py-1 bg-[#22c55e] rounded-md absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                    
+                            <!-- Testimonial Text -->
+                            <div class="relative pl-8 mb-8 mt-8">
+                                <blockquote class="quote-mark text-gray-700 text-lg leading-relaxed">
+                                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                                </blockquote>
+                            </div>
+                    
+                            <!-- Author Info -->
+                            <div class="flex items-center">
+                                <img src="/placeholder.svg?height=48&width=48" alt="Jane Doe" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Jane Doe</h4>
+                                    <p class="text-gray-600">SQA: Batch 6</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-8">
+                        <div class="bg-white rounded-[2rem] p-8 max-w-md w-full relative">
+                            <!-- Rating Stars -->
+                            <div class="inline-flex gap-0.5 px-2 py-1 bg-[#22c55e] rounded-md absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                    
+                            <!-- Testimonial Text -->
+                            <div class="relative pl-8 mb-8 mt-8">
+                                <blockquote class="quote-mark text-gray-700 text-lg leading-relaxed">
+                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                                </blockquote>
+                            </div>
+                    
+                            <!-- Author Info -->
+                            <div class="flex items-center">
+                                <img src="/placeholder.svg?height=48&width=48" alt="John Smith" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-bold text-gray-900">John Smith</h4>
+                                    <p class="text-gray-600">SQA: Batch 7</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Pagination Dots -->
+            <div id="dots" class="flex justify-center gap-3 mt-12">
+                <!-- Dots will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 6th upocoming live courses  -->
+    <div class="bg-[#efefef] p-4 md:p-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <h1 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">
+                আপকামিং লাইভ কোর্স
+                <div class="h-1 w-32 bg-green-500 mx-auto mt-2"></div>
+            </h1>
+    
+            <!-- Course Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- SQA Course Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col justify-between h-full">
+                    <div>
+                        <div class="relative p-1">
+                            <img src="/assests/sqa.png" alt="SQA Course" class="w-full h-56 rounded-lg object-cover p-1">
+                        </div>
+                        <div class="p-1">
+                            <!-- Course Meta -->
+                            <div class="flex justify-between px-4 items-center gap-4 mb-4 text-sm w-full bg-gray-200 rounded-lg transition-colors py-2">
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span>Batch 25</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                    </svg>
+                                    <span>Total Seat 180</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <span>16 Lesson</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4 px-4">SQA: Manual & Automated Testing</h3>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-auto py-6">
+                        <button class="w-80 py-2 bg-[#d8ffd8] rounded-lg hover:bg-[#d8ffd8] transition-colors">
+                            বিস্তারিত দেখি →
+                        </button>
+                    </div>
+                </div>
+    
+                <!-- Java Programming Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col justify-between h-full">
+                    <div>
+                        <div class="relative p-1">
+                            <img src="/assests/java.png" alt="SQA Course" class="w-full h-56 rounded-lg object-cover p-1">
+                        </div>
+                        <div class="p-1">
+                            <!-- Course Meta -->
+                            <div class="flex justify-between px-4 items-center gap-4 mb-4 text-sm w-full bg-gray-200 rounded-lg transition-colors py-2">
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span>Batch 25</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                    </svg>
+                                    <span>Total Seat 180</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <span>16 Lesson</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4 px-4">Java Programming Masterclass for Software Developers</h3>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-auto py-6">
+                        <button class="w-80 py-2 bg-[#d8ffd8] rounded-lg hover:bg-[#d8ffd8] transition-colors">
+                            বিস্তারিত দেখি →
+                        </button>
+                    </div>
+                </div>
+    
+                <!-- UI/UX Design Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col justify-between h-full">
+                    <div>
+                        <div class="relative p-1">
+                            <img src="/assests/design.png" alt="SQA Course" class="w-full h-56 rounded-lg object-cover p-1">
+                        </div>
+                        <div class="p-1">
+                            <!-- Course Meta -->
+                            <div class="flex justify-between px-4 items-center gap-4 mb-4 text-sm w-full bg-gray-200 rounded-lg transition-colors py-2">
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span>Batch 25</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                    </svg>
+                                    <span>Total Seat 180</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <span>16 Lesson</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4 px-4">Complete Web & Mobile Designer in 2025 UI/UX</h3>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-auto py-6">
+                        <button class="w-80 py-2 bg-[#d8ffd8] rounded-lg hover:bg-[#d8ffd8] transition-colors">
+                            বিস্তারিত দেখি →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     </div>
+
+
+     <!-- 7th instructor  -->
+      <div class="bg-pattern min-h-screen p-4 md:p-8">
+        <div class="max-w-7xl mx-auto">
+              <!-- Header Section -->
+        <div class="text-center mb-12">
+            <div class="inline-flex items-center justify-center gap-2 mb-4">
+                <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                </svg>
+                <span class="text-green-600 font-medium">Our Instructors</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Meet Our Expert Mentors</h1>
+        </div>
+
+        <!-- Instructors Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <!-- Edward Norton Card -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+                <div class="bg-blue-400 p-4">
+                    <img src="/placeholder.svg?height=400&width=400" alt="Edward Norton" class="w-full h-64 object-cover rounded-xl">
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 text-sm mb-1">Instructor</p>
+                    <div class="flex items-center gap-2">
+                        <h2 class="text-xl font-bold text-gray-900">Edward Norton</h2>
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Karen Barnes Card -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+                <div class="bg-orange-400 p-4">
+                    <img src="/placeholder.svg?height=400&width=400" alt="Karen Barnes" class="w-full h-64 object-cover rounded-xl">
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 text-sm mb-1">Instructor</p>
+                    <div class="flex items-center gap-2">
+                        <h2 class="text-xl font-bold text-gray-900">Karen Barnes</h2>
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Anthony Wade Card -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+                <div class="bg-blue-400 p-4">
+                    <img src="/placeholder.svg?height=400&width=400" alt="Anthony Wade" class="w-full h-64 object-cover rounded-xl">
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 text-sm mb-1">Instructor</p>
+                    <div class="flex items-center gap-2">
+                        <h2 class="text-xl font-bold text-gray-900">Anthony Wade</h2>
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mario Fleming Card -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+                <div class="bg-yellow-400 p-4">
+                    <img src="/placeholder.svg?height=400&width=400" alt="Mario Fleming" class="w-full h-64 object-cover rounded-xl">
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 text-sm mb-1">Instructor</p>
+                    <div class="flex items-center gap-2">
+                        <h2 class="text-xl font-bold text-gray-900">Mario Fleming</h2>
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="text-center">
+            <p class="text-gray-600 inline-flex items-center gap-2">
+                Empower your teaching journey with a rich tapestry of interactive lessons.
+                <a href="#" class="text-green-600 font-medium inline-flex items-center group">
+                    view all instructors
+                    <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </p>
+        </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- 8th Joint Our Team -->
+       <div class="bg-sky-50 min-h-screen">
+        <section class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 rounded-3xl mx-4 md:mx-8 lg:mx-auto lg:max-w-6xl mt-4 md:mt-8">
+            <div class="container mx-auto px-6 py-16 md:py-20">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Content -->
+                    <div class="z-10">
+                        <div class="flex items-center gap-2 mb-6">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+                            </svg>
+                            <span class="text-green-500 font-medium">Joint Our Team</span>
+                        </div>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                            Become an<br>instructor
+                        </h1>
+                        <p class="text-gray-300 text-lg mb-8 max-w-lg">
+                            Helping employees gain skills and providing career development often take a back seat to business priorities but workplace.
+                        </p>
+                        <a href="#" class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">
+                            Join Us
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <!-- Right Image -->
+                    <div class="relative lg:absolute lg:right-0 lg:top-0 lg:w-1/2 lg:h-full">
+                        <div class="aspect-square w-full max-w-md mx-auto lg:max-w-none lg:h-full">
+                            <div class="w-full h-full rounded-full bg-gradient-to-r from-yellow-300 to-orange-400 overflow-hidden relative z-0">
+                                <img 
+                                    src="/assests/instructor.png" 
+                                    alt="Instructor" 
+                                    class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[95%] object-cover z-10"
+                                >
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Stats Section -->
+        <section class="bg-slate-900 rounded-3xl mx-4 md:mx-8 lg:mx-auto lg:max-w-6xl lg: mb-16 mt-6 md:mt-8">
+            <div class="container mx-auto px-6 py-16">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <!-- Left Content -->
+                    <div>
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-green-500 leading-tight">
+                            Learn Easily<br>
+                            Anywhere & Anytime
+                        </h2>
+                    </div>
+    
+                    <!-- Right Stats -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Stat Card 1 -->
+                        <div class="bg-green-100 rounded-2xl p-6">
+                            <div class="text-4xl font-bold text-slate-900 mb-2">90%</div>
+                            <h3 class="text-lg font-semibold text-slate-900 mb-2">Learners</h3>
+                            <p class="text-sm text-slate-700">
+                                Feel more confident when applying for jobs
+                            </p>
+                        </div>
+    
+                        <!-- Stat Card 2 -->
+                        <div class="bg-green-100 rounded-2xl p-6">
+                            <div class="text-4xl font-bold text-slate-900 mb-2">6k+</div>
+                            <h3 class="text-lg font-semibold text-slate-900 mb-2">Learners</h3>
+                            <p class="text-sm text-slate-700">
+                                Became better at their job
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       </div>
+
+       <!-- 9th email  -->
+        <div class="bg-slate-900 min-h-screen p-4 md:p-8">
+            <div class="max-w-6xl mx-auto">
+                  <!-- Blog Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Blog</h1>
+            <div class="blog-underline"></div>
+        </div>
+
+        <!-- Blog Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            <!-- Blog Card 1 -->
+            <div class="bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img src="/assests/blog.png" alt="Blog Post" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-white mb-3">একজন ক্রেতার কি রোডাই ম্যানেজার হতে পারে?</h2>
+                    <p class="text-gray-400 text-sm mb-4">প্রোগ্রামিংয়ের দুনিয়া বিগিনারদের জন্য অনেকটাই কঠিন। প্রোগ্রামিং ভাষাও থেকে কারিগরি বিষয় অনেকেই প্রোগ্রামার হতে চায়। কিন্তু ...</p>
+                    <time class="text-gray-500 text-sm">23 November 2024</time>
+                </div>
+            </div>
+
+            <!-- Blog Card 2 -->
+            <div class="bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img src="/assests/blog.png" alt="Blog Post" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-white mb-3">টেকনোলজি না জানা কেউ কি DevOps শিখতে পারবে?</h2>
+                    <p class="text-gray-400 text-sm mb-4">প্রোগ্রামিংয়ের দুনিয়া বিগিনারদের জন্য অনেকটাই কঠিন। প্রোগ্রামিং ভাষাও থেকে কারিগরি বিষয় অনেকেই প্রোগ্রামার হতে চায়। কিন্তু ...</p>
+                    <time class="text-gray-500 text-sm">23 November 2024</time>
+                </div>
+            </div>
+
+            <!-- Blog Card 3 -->
+            <div class="bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img src="/assests/blog.png" alt="Blog Post" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-white mb-3">পাইথন কি বিগিনারদের জন্য সেরা চয়েস?</h2>
+                    <p class="text-gray-400 text-sm mb-4">প্রোগ্রামিংয়ের দুনিয়া বিগিনারদের জন্য অনেকটাই কঠিন। প্রোগ্রামিং ভাষাও থেকে কারিগরি বিষয় অনেকেই প্রোগ্রামার হতে চায়। কিন্তু ...</p>
+                    <time class="text-gray-500 text-sm">23 November 2024</time>
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter Section -->
+        <div class="bg-slate-800 rounded-xl p-8 text-center">
+            <div class="max-w-2xl mx-auto">
+                <div class="flex items-center justify-center gap-2 mb-4">
+                    <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <h2 class="text-xl font-bold text-white">নিউজলেটার পেতে সাবস্ক্রাইব করুন</h2>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input 
+                        type="email" 
+                        placeholder="এখানে ইমেইল প্রদান লিখুন" 
+                        class="flex-1 px-4 py-2 rounded-lg bg-slate-700 text-white border border-slate-600 focus:outline-none focus:border-green-500"
+                    >
+                    <button class="px-6 py-2 bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg transition-colors duration-200 flex items-center justify-center gap-2">
+                        সাবস্ক্রাইব করুন
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+            </div>
+
+        </div>
+
+        <!-- 10th faq  -->
+         <div class="bg-green-100 font-sans">
+            <div class="max-w-4xl mx-auto p-6">
+                <!-- Header -->
+                <div class="text-center">
+                    <h1 class="text-3xl font-bold mb-6">Frequently Asked Questions:</h1>
+                </div>
+        
+                <!-- FAQ Section -->
+                <div class="grid md:grid-cols-2 gap-6 items-center">
+                    <!-- Image Section -->
+                    <div class="flex justify-center md:justify-start">
+                        <div class="relative">
+                            <img src="/assests/faq.png" alt="Woman with laptop" class="rounded-lg">
+                            <div class="absolute top-0 left-0 w-full h-full bg-blue-500/10 -z-10 rounded-lg"></div>
+                        </div>
+                    </div>
+        
+                    <!-- FAQ Items -->
+                    <div>
+                        <div class="space-y-4">
+                            <!-- Question 1 -->
+                            <div class="border rounded-lg">
+                                <button class="w-full flex justify-between items-center p-4 text-left font-semibold bg-green-300" onclick="toggleFaq(this)">
+                                    How much time do I need to commit each week?
+                                    <span>&#x25BC;</span>
+                                </button>
+                                <div class="p-4 bg-white hidden">
+                                    That's totally up to you! You can spend as little or as much time as you want. Remember, practice makes perfect!
+                                </div>
+                            </div>
+        
+                            <!-- Question 2 -->
+                            <div class="border rounded-lg">
+                                <button class="w-full flex justify-between items-center p-4 text-left font-semibold bg-green-300" onclick="toggleFaq(this)">
+                                    What if I get stuck on something?
+                                    <span>&#x25BC;</span>
+                                </button>
+                                <div class="p-4 bg-white hidden">
+                                    Reach out for help! You can always ask questions or get guidance from community resources.
+                                </div>
+                            </div>
+        
+                            <!-- Question 3 -->
+                            <div class="border rounded-lg">
+                                <button class="w-full flex justify-between items-center p-4 text-left font-semibold bg-green-300" onclick="toggleFaq(this)">
+                                    How do I know I'm making progress?
+                                    <span>&#x25BC;</span>
+                                </button>
+                                <div class="p-4 bg-white hidden">
+                                    You'll see progress through regular updates, feedback, and milestones.
+                                </div>
+                            </div>
+        
+                            <!-- Question 4 -->
+                            <div class="border rounded-lg">
+                                <button class="w-full flex justify-between items-center p-4 text-left font-semibold bg-green-300" onclick="toggleFaq(this)">
+                                    How to manage notifications?
+                                    <span>&#x25BC;</span>
+                                </button>
+                                <div class="p-4 bg-white hidden">
+                                    You can manage notifications in the settings section of your account.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         </div>
+
+         <!-- 11th contact  -->
+          <div class="bg-purple-50 font-sans">
+            <div class="max-w-6xl mx-auto p-6">
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+                    <!-- Form Section -->
+                    <div>
+                        <form class="bg-white p-6 rounded-lg shadow-md space-y-4">
+                            <div>
+                                <label for="full-name" class="block text-lg font-semibold mb-2">Full Name :</label>
+                                <input type="text" id="full-name" name="full-name" placeholder="Enter your Name" class="w-full p-3 border rounded-lg shadow-sm focus:ring-2 focus:ring-purple-400 focus:outline-none">
+                            </div>
+        
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="email" class="block text-lg font-semibold mb-2">E-Mail :</label>
+                                    <input type="email" id="email" name="email" placeholder="Enter your email" class="w-full p-3 border rounded-lg shadow-sm focus:ring-2 focus:ring-purple-400 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-lg font-semibold mb-2">Phone Number :</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Enter your Number" class="w-full p-3 border rounded-lg shadow-sm focus:ring-2 focus:ring-purple-400 focus:outline-none">
+                                </div>
+                            </div>
+        
+                            <div>
+                                <label for="message" class="block text-lg font-semibold mb-2">Message :</label>
+                                <textarea id="message" name="message" placeholder="Write your Message" rows="4" class="w-full p-3 border rounded-lg shadow-sm focus:ring-2 focus:ring-purple-400 focus:outline-none"></textarea>
+                            </div>
+        
+                            <button type="submit" class="bg-purple-500 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-purple-600 transition">Send Messages</button>
+                        </form>
+                    </div>
+        
+                    <!-- Contact Info Section -->
+                    <div class="text-center md:text-left space-y-6">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-purple-200 rounded-full">
+                           <img src="/assests/message.gif" alt="message">
+                        </div>
+        
+                        <h2 class="text-3xl font-bold text-purple-600">Contact Us</h2>
+                        <p class="text-gray-600">Contact us for questions, technical assistance, or collaboration opportunities via the contact information provided.</p>
+        
+                        <div class="flex items-center space-x-4">
+                            <div class="inline-flex items-center justify-center w-10 h-10 bg-green-100 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-6 w-6 text-white">
+                                    <!-- Font Awesome Free Phone Icon -->
+                                    <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+                                </svg>
+                            </div>
+                            <p class="text-lg font-semibold">+123-456-7890</p>
+                        </div>
+                        
+        
+                        <div class="flex items-center space-x-4">
+                            <div class="inline-flex items-center justify-center w-10 h-10 bg-green-100 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 4.5h-9A2.5 2.5 0 005 7v10a2.5 2.5 0 002.5 2.5h9A2.5 2.5 0 0019 17V7a2.5 2.5 0 00-2.5-2.5zM5 7l7 5 7-5" />
+                                </svg>
+                            </div>
+                            <p class="text-lg font-semibold">hello@reallygreatsite.com</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+          </div>
+
+          <!-- 12th footer  -->
+           <div class="bg-purple-50 font-sans">
+            <div class="bg-gray-900 text-white py-12">
+                <div class="max-w-7xl mx-auto px-6 space-y-12">
+                    <!-- Heading -->
+                    <div class="text-center">
+                        <h2 class="text-3xl font-bold">Ready to start learning? Contact us!</h2>
+                        <p class="text-gray-400 mt-2">Discover a wide range of expert-led courses tailored to your personal and professional growth.</p>
+                    </div>
+        
+                    <!-- Newsletter and Links -->
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                        <!-- Newsletter Section -->
+                        <div class="col-span-1">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <img src="/assests/footer_logo.png" alt="Logo" class="w-82 h-10">
+                            </div>
+                            <p class="text-gray-400 mb-4">Stay in the loop and sign up for the Wardiere newsletter:</p>
+                            <form class="flex items-center">
+                                <input type="email" placeholder="Enter your email" class="w-full p-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                <button class="bg-purple-500 p-3 rounded-r-lg hover:bg-purple-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                        
+        
+                        <!-- Navigation Links -->
+                        <div class="col-span-1">
+                            <h3 class="text-lg font-semibold mb-4">Company</h3>
+                            <ul class="space-y-2 text-gray-400">
+                                <li><a href="#" class="hover:text-white">Home</a></li>
+                                <li><a href="#" class="hover:text-white">About</a></li>
+                                <li><a href="#" class="hover:text-white">Solutions</a></li>
+                                <li><a href="#" class="hover:text-white">Pricing</a></li>
+                                <li><a href="#" class="hover:text-white">Team</a></li>
+                                <li><a href="#" class="hover:text-white">Career</a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="col-span-1">
+                            <h3 class="text-lg font-semibold mb-4">Documentation</h3>
+                            <ul class="space-y-2 text-gray-400">
+                                <li><a href="#" class="hover:text-white">Help Centre</a></li>
+                                <li><a href="#" class="hover:text-white">Contact</a></li>
+                                <li><a href="#" class="hover:text-white">FAQ</a></li>
+                                <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="col-span-1">
+                            <h3 class="text-lg font-semibold mb-4">Social</h3>
+                            <ul class="space-y-2 text-gray-400">
+                                <li><a href="#" class="hover:text-white">Facebook</a></li>
+                                <li><a href="#" class="hover:text-white">Instagram</a></li>
+                                <li><a href="#" class="hover:text-white">Youtube</a></li>
+                                <li><a href="#" class="hover:text-white">Twitter</a></li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <!-- Footer Bottom -->
+                    <div class="border-t border-gray-800 pt-6 flex justify-between text-gray-400">
+                        <p>&copy; XYZ Inc. All Rights Reserved 2028</p>
+                        <a href="#" class="hover:text-white">Terms & Conditions</a>
+                    </div>
+                </div>
+            </div>
+
+           </div>
+
+
+
+
+
+
+    <!-- script  -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.getElementById('carousel');
+            const dotsContainer = document.getElementById('dots');
+            const cards = carousel.children;
+            const cardWidth = cards[0].offsetWidth;
+            let currentIndex = 0;
+
+            // Create dots
+            for (let i = 0; i < cards.length; i++) {
+                const dot = document.createElement('button');
+                dot.classList.add('w-3', 'h-3', 'rounded-full', 'bg-white', 'transition-colors', 'duration-300');
+                dot.addEventListener('click', () => goToCard(i));
+                dotsContainer.appendChild(dot);
+            }
+
+            const dots = dotsContainer.children;
+
+            function updateDots() {
+                for (let i = 0; i < dots.length; i++) {
+                    if (i === currentIndex) {
+                        dots[i].classList.remove('bg-white');
+                        dots[i].classList.add('bg-[#22c55e]');
+                    } else {
+                        dots[i].classList.remove('bg-[#22c55e]');
+                        dots[i].classList.add('bg-white');
+                    }
+                }
+            }
+
+            function goToCard(index) {
+                currentIndex = index;
+                carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+                updateDots();
+            }
+
+            // Initialize
+            updateDots();
+
+            // Optional: Add touch swipe functionality
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            carousel.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            carousel.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+
+            function handleSwipe() {
+                if (touchStartX - touchEndX > 50 && currentIndex < cards.length - 1) {
+                    goToCard(currentIndex + 1);
+                } else if (touchEndX - touchStartX > 50 && currentIndex > 0) {
+                    goToCard(currentIndex - 1);
+                }
+            }
+        });
+    </script>
+
+<script>
+    // Toggle FAQ visibility
+    function toggleFaq(button) {
+        const content = button.nextElementSibling;
+        const isHidden = content.classList.contains('hidden');
+        document.querySelectorAll('.p-4.bg-white').forEach(div => div.classList.add('hidden'));
+        if (isHidden) {
+            content.classList.remove('hidden');
+        } else {
+            content.classList.add('hidden');
+        }
+    }
+</script>
+</body>
+</html>

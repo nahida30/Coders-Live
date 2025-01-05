@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details</title>
+    <!-- tailwind css and daisyUi  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <!-- Left side -->
+            <div class="flex items-center">
+                <img src="/assests/logo.png" alt="CODERS Logo" class="h-10">
+                
+                <!-- Search bar - hidden on mobile -->
+                <div class="hidden md:flex items-center ml-8">
+                    <div class="relative">
+                        <input type="text" placeholder="কোর্স সার্চ করুন" 
+                            class="w-[300px] pl-10 pr-4 py-2 border border-gray-300 rounded-full text-sm focus:outline-none focus:border-green-500">
+                        <div class="absolute left-3 top-2.5">
+                            <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right side -->
+            <div class="flex items-center">
+                <!-- Mobile menu button -->
+                <button type="button" class="md:hidden bg-white p-2 rounded-md">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+
+                <!-- Desktop menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-green-600">লাইভ কোর্স</a>
+                    <a href="#" class="text-gray-700 hover:text-green-600">ফ্রী কোর্স</a>
+                    <a href="/Blog.html" class="text-gray-700 hover:text-green-600">ব্লগ</a>
+                    <a href="#" class="text-gray-700 hover:text-green-600">সব কোর্স</a>
+                    <a href="/auth/login.html" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700">
+                        লগিন / সাইনআপ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <!-- Blog Header Section -->
+    <div class="hero bg-base-200">
+        <div class="hero-content gap-96 flex-col lg:flex-row-reverse">
+          <img
+            src="/assests/blog_banner.png"
+            class="max-w-sm rounded-lg shadow-2xl" />
+          <div>
+            
+            <p class="py-6">
+                ব্লগ / ক্যাটাগরি / বিজনেস এন্ড মার্কেটিং
+            </p>
+            <h1 class="text-4xl font-bold">মার্কেটিং মানে কি বুস্টিং? <br>
+                মার্কেটিং এবং বুস্টিং জিনিস ?!</h1>
+            <p>33 November 2024</p>
+          </div>
+        </div>
+      </div>
+
+    <!-- Blog Content Section -->
+    <div class="container mx-auto px-4 lg:px-44 py-10">
+       <p class="mb-4">
+        ডিজিটাল মার্কেটিং জগতে এসে অনেকেই মার্কেটিং এবং বুস্টিং এই দুটি ওয়ার্ড নিয়ে কনফিউশনে পড়ে যান। কেননা কেউ কেউ বুস্টিংকে মার্কেটিং বলে ফেলেন, আবার কেউ কেউ মার্কেটিং-কে বুস্টিং। এই জন্যে যারা এই জগতে নতুন পা রাখছেন, তারা ভেবে বসতে পারেন দুটোই বুঝি একই! কিন্তু আসলে তা না। মার্কেটিং এবং বুস্টিং এর মধ্যকার তফাৎটা বাস্তবে বেশ বড়। আর আপনি যদি এই মার্কেটিং ফিল্ডে নিজের অবস্থান দৃঢ় করতে চান, তাহলে সেই তফাৎটা বুঝা আপনার জন্য খুবই গুরুত্বপূর্ণ।
+       </p>
+       
+       <p>
+        আর সেই কাজেই আপনাকে সাহায্য করতে এই আর্টিকেলে আলোচনা করব মার্কেটিং এবং বুস্টিং কেন একই জিনিস না। শুরুটা মার্কেটিং দিয়েই করা যাক।
+       </p>
+
+       <div class="flex justify-center p-4">
+        <img src="/assests/blog_details.png" alt="Blog Details" class="rounded-lg max-w-full h-auto">
+    </div>
+    
+    </div>
+
+      <!-- Blog Section -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Share Section -->
+        <div class="text-center mb-12">
+            <h2 class="text-2xl font-bold mb-6">এই আর্টিকেল শেয়ার করুন</h2>
+            <div class="flex justify-center items-center gap-4 border border-purple-500 p-4 rounded-lg">
+                <button class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                    <i data-lucide="facebook" class="w-6 h-6 text-[#1877f2]"></i>
+                </button>
+                <button class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                    <i data-lucide="linkedin" class="w-6 h-6 text-[#0077b5]"></i>
+                </button>
+                <button class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                    <i data-lucide="twitter" class="w-6 h-6 text-black"></i>
+                </button>
+                <button class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                    <i data-lucide="mail" class="w-6 h-6 text-gray-600"></i>
+                </button>
+                <button class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                    <i data-lucide="phone" class="w-6 h-6 text-[#25D366]"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Related Articles Section -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-center">রিলেটেড আর্টিকেল</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Article Card 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="relative h-48 bg-[#0095ff] flex items-center justify-center">
+                        <img src="/placeholder.svg" alt="Target icon" class="w-32 h-32">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">বিসিনিয়রা কিভাবে ডিজিটাল মার্কেটিং শিখতে পারে?</h3>
+                        <p class="text-gray-600 mb-4">প্রোগ্রামিং দুনিয়া বিগিনারদের জন্য অনেকটাই কঠিন। প্রোগ্রামিং আউট থেকে ক্যারিয়ার নিয়ে অনেকেই প্রোগ্রাম করে থাকে। কিন্তু ...</p>
+                        <p class="text-gray-500 text-sm">33 November 2024</p>
+                    </div>
+                </div>
+
+                <!-- Article Card 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="relative h-48 bg-[#0095ff] flex items-center justify-center">
+                        <img src="/placeholder.svg" alt="Target icon" class="w-32 h-32">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">কপিরাইটিং এর বিভিন্ন ফর্মের মাধ্যে পরিচিত হওয়া</h3>
+                        <p class="text-gray-600 mb-4">প্রোগ্রামিং দুনিয়া বিগিনারদের জন্য অনেকটাই কঠিন। প্রোগ্রামিং আউট থেকে ক্যারিয়ার নিয়ে অনেকেই প্রোগ্রাম করে থাকে। কিন্তু ...</p>
+                        <p class="text-gray-500 text-sm">33 November 2024</p>
+                    </div>
+                </div>
+
+                <!-- Article Card 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="relative h-48 bg-[#0095ff] flex items-center justify-center">
+                        <img src="/placeholder.svg" alt="Target icon" class="w-32 h-32">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">বিসিনিয়রা কিভাবে কন্টেন্ট মার্কেটিং শিখতে পারে?</h3>
+                        <p class="text-gray-600 mb-4">প্রোগ্রামিং দুনিয়া বিগিনারদের জন্য অনেকটাই কঠিন। প্রোগ্রামিং আউট থেকে ক্যারিয়ার নিয়ে অনেকেই প্রোগ্রাম করে থাকে। কিন্তু ...</p>
+                        <p class="text-gray-500 text-sm">33 November 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- live course  -->
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-2 border-gray-300 rounded-2xl mb-16">
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-center">রিলেটেড আর্টিকেল</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Article Card 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="relative h-48 bg-[#0095ff] flex items-center justify-center">
+                        <img src="/placeholder.svg" alt="Target icon" class="w-32 h-32">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">বিসিনিয়রা কিভাবে ডিজিটাল মার্কেটিং শিখতে পারে?</h3>
+                        <p class="text-gray-600 mb-4">প্রোগ্রামিং দুনিয়া বিগিনারদের জন্য অনেকটাই কঠিন। প্রোগ্রামিং আউট থেকে ক্যারিয়ার নিয়ে অনেকেই প্রোগ্রাম করে থাকে। কিন্তু ...</p>
+                        <p class="text-gray-500 text-sm">33 November 2024</p>
+                    </div>
+                </div>
+
+                <!-- Article Card 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="relative h-48 bg-[#0095ff] flex items-center justify-center">
+                        <img src="/placeholder.svg" alt="Target icon" class="w-32 h-32">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">কপিরাইটিং এর বিভিন্ন ফর্মের মাধ্যে পরিচিত হওয়া</h3>
+                        <p class="text-gray-600 mb-4">প্রোগ্রামিং দুনিয়া বিগিনারদের জন্য অনেকটাই কঠিন। প্রোগ্রামিং আউট থেকে ক্যারিয়ার নিয়ে অনেকেই প্রোগ্রাম করে থাকে। কিন্তু ...</p>
+                        <p class="text-gray-500 text-sm">33 November 2024</p>
+                    </div>
+                </div>
+
+                <!-- Article Card 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="relative h-48 bg-[#0095ff] flex items-center justify-center">
+                        <img src="/placeholder.svg" alt="Target icon" class="w-32 h-32">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">বিসিনিয়রা কিভাবে কন্টেন্ট মার্কেটিং শিখতে পারে?</h3>
+                        <p class="text-gray-600 mb-4">প্রোগ্রামিং দুনিয়া বিগিনারদের জন্য অনেকটাই কঠিন। প্রোগ্রামিং আউট থেকে ক্যারিয়ার নিয়ে অনেকেই প্রোগ্রাম করে থাকে। কিন্তু ...</p>
+                        <p class="text-gray-500 text-sm">33 November 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- footer  -->
+    <div class="bg-purple-50 font-sans">
+      <div class="bg-gray-900 text-white py-12">
+          <div class="max-w-7xl mx-auto px-6 space-y-12">
+              <!-- Heading -->
+              <div class="text-center">
+                  <h2 class="text-3xl font-bold">Ready to start learning? Contact us!</h2>
+                  <p class="text-gray-400 mt-2">Discover a wide range of expert-led courses tailored to your personal and professional growth.</p>
+              </div>
+  
+              <!-- Newsletter and Links -->
+              <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                  <!-- Newsletter Section -->
+                  <div class="col-span-1">
+                      <div class="flex items-center space-x-3 mb-4">
+                          <img src="/assests/footer_logo.png" alt="Logo" class="w-82 h-10">
+                      </div>
+                      <p class="text-gray-400 mb-4">Stay in the loop and sign up for the Wardiere newsletter:</p>
+                      <form class="flex items-center">
+                          <input type="email" placeholder="Enter your email" class="w-full p-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                          <button class="bg-purple-500 p-3 rounded-r-lg hover:bg-purple-600">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                              </svg>
+                          </button>
+                      </form>
+                  </div>
+                  
+  
+                  <!-- Navigation Links -->
+                  <div class="col-span-1">
+                      <h3 class="text-lg font-semibold mb-4">Company</h3>
+                      <ul class="space-y-2 text-gray-400">
+                          <li><a href="#" class="hover:text-white">Home</a></li>
+                          <li><a href="#" class="hover:text-white">About</a></li>
+                          <li><a href="#" class="hover:text-white">Solutions</a></li>
+                          <li><a href="#" class="hover:text-white">Pricing</a></li>
+                          <li><a href="#" class="hover:text-white">Team</a></li>
+                          <li><a href="#" class="hover:text-white">Career</a></li>
+                      </ul>
+                  </div>
+  
+                  <div class="col-span-1">
+                      <h3 class="text-lg font-semibold mb-4">Documentation</h3>
+                      <ul class="space-y-2 text-gray-400">
+                          <li><a href="#" class="hover:text-white">Help Centre</a></li>
+                          <li><a href="#" class="hover:text-white">Contact</a></li>
+                          <li><a href="#" class="hover:text-white">FAQ</a></li>
+                          <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                      </ul>
+                  </div>
+  
+                  <div class="col-span-1">
+                      <h3 class="text-lg font-semibold mb-4">Social</h3>
+                      <ul class="space-y-2 text-gray-400">
+                          <li><a href="#" class="hover:text-white">Facebook</a></li>
+                          <li><a href="#" class="hover:text-white">Instagram</a></li>
+                          <li><a href="#" class="hover:text-white">Youtube</a></li>
+                          <li><a href="#" class="hover:text-white">Twitter</a></li>
+                      </ul>
+                  </div>
+              </div>
+  
+              <!-- Footer Bottom -->
+              <div class="border-t border-gray-800 pt-6 flex justify-between text-gray-400">
+                  <p>&copy; XYZ Inc. All Rights Reserved 2028</p>
+                  <a href="#" class="hover:text-white">Terms & Conditions</a>
+              </div>
+          </div>
+      </div>
+
+     </div>
+
+      <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+
+
+</body>
+</html>
