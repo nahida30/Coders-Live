@@ -6,15 +6,32 @@
     <title>CODERS - Skill Development Platform</title>
    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
    <script src="https://cdn.tailwindcss.com"></script>
+
+   <!-- font awesome  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+   <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'navy': '#0a0f2c',
+                    'accent': '#00f200',
+                }
+            }
+        }
+    }
+</script>
    <style>
-    .quote-mark::before {
+    
+   .quote-mark::before {
         content: '"';
         font-size: 4rem;
         position: absolute;
         left: 0;
         top: -1rem;
         color: #22c55e;
-        font-family: serif;
+        opacity: 0.3;
     }
 
     .bg-pattern {
@@ -563,151 +580,161 @@
      </div>
       
     <!-- 5th testimonial  -->
-    <div class="bg-[#0a0f2c] min-h-screen flex items-center justify-center p-16">
-        <div class="w-full max-w-6xl mx-auto">
-            <!-- Header -->
-            <div class="text-center mb-16">
-                <div class="flex items-center justify-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="#00f200">
+    <div class="bg-navy min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <!-- Header with Navigation Buttons -->
+            <div class="text-center mb-16 relative">
+                <!-- Top Navigation Buttons -->
+                <div class="absolute right-0 top-0 flex gap-2">
+                    <button class="bg-white p-2 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button class="bg-white hover:bg-white/20 transition-colors p-2 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+    
+                <!-- Header Content -->
+                <div class="flex items-center justify-center gap-2 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="#00f200">
                         <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
                     </svg>
-                    <h2 class="text-xl font-bold text-[#00f200]">ফিডব্যাক</h2>
+                    <h2 class="text-xl font-bold text-accent">ফিডব্যাক</h2>
                 </div>
-                
-                
-                <h2 class="text-4xl font-bold text-white mb-3">আমাদের লার্নারদের কাছে শুনুন</h2>
-                <div class="flex items-center justify-center">
-                    <p class="text-xl w-96 text-gray-300 text-center">Hear what our students say about their experience</p>
-                </div>
-                
+                <h1 class="text-4xl font-bold text-white mb-3">আমাদের লার্নারদের কাছে শুনুন</h1>
+                <p class="text-xl text-gray-300 max-w-lg mx-auto">
+                    Hear what our students say about their experience
+                </p>
             </div>
-
+    
             <!-- Testimonials Section -->
-            <div class="relative overflow-hidden">
-                <div id="carousel" class="flex transition-transform duration-300 ease-in-out">
-                    <!-- Card 1 -->
-                    <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-8">
-                        <div class="bg-white rounded-[2rem] p-8 max-w-md w-full relative">
-                            <!-- Rating Stars -->
-                            <div class="inline-flex gap-0.5 px-2 py-1 bg-[#22c55e] rounded-md absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                            </div>
-                    
-                            <!-- Testimonial Text -->
-                            <div class="relative pl-8 mb-8 mt-8">
-                                <blockquote class="quote-mark text-gray-700 text-lg leading-relaxed">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed tincidunt velit. Donec bibendum turpis vitae maximus bibendum.
-                                </blockquote>
-                            </div>
-                    
-                            <!-- Author Info -->
-                            <div class="flex items-center">
-                                <img src="/placeholder.svg?height=48&width=48" alt="Teddy Yu" class="w-12 h-12 rounded-full mr-4">
-                                <div>
-                                    <h4 class="font-bold text-gray-900">Teddy Yu</h4>
-                                    <p class="text-gray-600">SQA: Batch 5</p>
-                                </div>
-                            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-[2rem] p-8 relative">
+                    <!-- Rating Stars -->
+                    <div class="inline-flex gap-0.5 px-2 py-1 bg-[#22c55e] rounded-md absolute -top-3 left-1/2 -translate-x-1/2">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+    
+                    <!-- Testimonial Text -->
+                    <div class="relative pl-8 mb-8 mt-8">
+                        <blockquote class="quote-mark text-gray-700 text-lg leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed tincidunt velit. Donec bibendum turpis vitae maximus bibendum.
+                        </blockquote>
+                    </div>
+    
+                    <!-- Author Info -->
+                    <div class="flex items-center">
+                        <img src="/placeholder.svg?height=48&width=48" alt="Teddy Yu" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Teddy Yu</h4>
+                            <p class="text-gray-600">SQA: Batch 5</p>
                         </div>
                     </div>
-                    <!-- Card 2 -->
-                    <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-8">
-                        <div class="bg-white rounded-[2rem] p-8 max-w-md w-full relative">
-                            <!-- Rating Stars -->
-                            <div class="inline-flex gap-0.5 px-2 py-1 bg-[#22c55e] rounded-md absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                            </div>
-                    
-                            <!-- Testimonial Text -->
-                            <div class="relative pl-8 mb-8 mt-8">
-                                <blockquote class="quote-mark text-gray-700 text-lg leading-relaxed">
-                                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-                                </blockquote>
-                            </div>
-                    
-                            <!-- Author Info -->
-                            <div class="flex items-center">
-                                <img src="/placeholder.svg?height=48&width=48" alt="Jane Doe" class="w-12 h-12 rounded-full mr-4">
-                                <div>
-                                    <h4 class="font-bold text-gray-900">Jane Doe</h4>
-                                    <p class="text-gray-600">SQA: Batch 6</p>
-                                </div>
-                            </div>
+                </div>
+    
+                <!-- Card 2 -->
+                <div class="bg-white rounded-[2rem] p-8 relative">
+                    <!-- Rating Stars -->
+                    <div class="inline-flex gap-0.5 px-2 py-1 bg-[#22c55e] rounded-md absolute -top-3 left-1/2 -translate-x-1/2">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+    
+                    <!-- Testimonial Text -->
+                    <div class="relative pl-8 mb-8 mt-8">
+                        <blockquote class="quote-mark text-gray-700 text-lg leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed tincidunt velit. Donec bibendum turpis vitae maximus bibendum.
+                        </blockquote>
+                    </div>
+    
+                    <!-- Author Info -->
+                    <div class="flex items-center">
+                        <img src="/placeholder.svg?height=48&width=48" alt="Mariana Napolitani" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Mariana Napolitani</h4>
+                            <p class="text-gray-600">Creative Director</p>
                         </div>
                     </div>
-                    <!-- Card 3 -->
-                    <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-8">
-                        <div class="bg-white rounded-[2rem] p-8 max-w-md w-full relative">
-                            <!-- Rating Stars -->
-                            <div class="inline-flex gap-0.5 px-2 py-1 bg-[#22c55e] rounded-md absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                            </div>
-                    
-                            <!-- Testimonial Text -->
-                            <div class="relative pl-8 mb-8 mt-8">
-                                <blockquote class="quote-mark text-gray-700 text-lg leading-relaxed">
-                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-                                </blockquote>
-                            </div>
-                    
-                            <!-- Author Info -->
-                            <div class="flex items-center">
-                                <img src="/placeholder.svg?height=48&width=48" alt="John Smith" class="w-12 h-12 rounded-full mr-4">
-                                <div>
-                                    <h4 class="font-bold text-gray-900">John Smith</h4>
-                                    <p class="text-gray-600">SQA: Batch 7</p>
-                                </div>
-                            </div>
+                </div>
+    
+                <!-- Card 3 -->
+                <div class="bg-white rounded-[2rem] p-8 relative">
+                    <!-- Rating Stars -->
+                    <div class="inline-flex gap-0.5 px-2 py-1 bg-[#22c55e] rounded-md absolute -top-3 left-1/2 -translate-x-1/2">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+    
+                    <!-- Testimonial Text -->
+                    <div class="relative pl-8 mb-8 mt-8">
+                        <blockquote class="quote-mark text-gray-700 text-lg leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed tincidunt velit. Donec bibendum turpis vitae maximus bibendum.
+                        </blockquote>
+                    </div>
+    
+                    <!-- Author Info -->
+                    <div class="flex items-center">
+                        <img src="/placeholder.svg?height=48&width=48" alt="Jamie Chastain" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Jamie Chastain</h4>
+                            <p class="text-gray-600">Sales Manager</p>
                         </div>
                     </div>
                 </div>
             </div>
     
             <!-- Pagination Dots -->
-            <div id="dots" class="flex justify-center gap-3 mt-12">
-                <!-- Dots will be dynamically added here -->
+            <div class="flex justify-center gap-2 mt-8">
+                <button class="w-2 h-2 rounded-full bg-accent"></button>
+                <button class="w-2 h-2 rounded-full bg-white/20"></button>
+                <button class="w-2 h-2 rounded-full bg-white/20"></button>
+                <button class="w-2 h-2 rounded-full bg-white/20"></button>
+                <button class="w-2 h-2 rounded-full bg-white/20"></button>
             </div>
         </div>
     </div>
@@ -716,11 +743,29 @@
     <!-- 6th upocoming live courses  -->
     <div class="bg-[#efefef] p-4 md:p-8">
         <div class="max-w-7xl mx-auto">
+            
             <!-- Header -->
-            <h1 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">
-                আপকামিং লাইভ কোর্স
-                <div class="h-1 w-32 bg-green-500 mx-auto mt-2"></div>
-            </h1>
+            <div class="flex justify-between items-center mb-16 relative">
+                <!-- Header -->
+                <h1 class="text-3xl md:text-4xl font-bold text-center flex-grow">
+                    আপকামিং লাইভ কোর্স
+                    <div class="h-1 w-32 bg-green-500 mx-auto mt-2"></div>
+                </h1>
+            
+                <!-- Top Navigation Buttons -->
+                <div class="flex gap-2">
+                    <button class="bg-white p-2 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#37c760]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button class="bg-white hover:bg-white/20 transition-colors p-2 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#37c760]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
     
             <!-- Course Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1096,7 +1141,7 @@
         </div>
 
         <!-- 10th faq  -->
-         <div class="bg-green-100 font-sans">
+        <div class="bg-green-100 font-sans">
             <div class="max-w-4xl mx-auto p-6">
                 <!-- Header -->
                 <div class="text-center">
@@ -1116,11 +1161,12 @@
                     <!-- FAQ Items -->
                     <div>
                         <div class="space-y-4">
-                            <!-- Question 1 -->
+                            <!-- FAQ Questions here -->
+                            <!-- Example for Question 1 -->
                             <div class="border rounded-lg">
-                                <button class="w-full flex justify-between items-center p-4 text-left font-semibold bg-green-300" onclick="toggleFaq(this)">
+                                <button class="w-full rounded-lg flex justify-between items-center p-4 text-left font-semibold bg-green-300" onclick="toggleFaq(this)">
                                     How much time do I need to commit each week?
-                                    <span>&#x25BC;</span>
+                                    <i class="fa-solid fa-angle-down"></i>
                                 </button>
                                 <div class="p-4 bg-white hidden">
                                     That's totally up to you! You can spend as little or as much time as you want. Remember, practice makes perfect!
@@ -1129,9 +1175,9 @@
         
                             <!-- Question 2 -->
                             <div class="border rounded-lg">
-                                <button class="w-full flex justify-between items-center p-4 text-left font-semibold bg-green-300" onclick="toggleFaq(this)">
+                                <button class="w-full rounded-lg flex justify-between items-center p-4 text-left font-semibold bg-green-300" onclick="toggleFaq(this)">
                                     What if I get stuck on something?
-                                    <span>&#x25BC;</span>
+                                    <i class="fa-solid fa-angle-down"></i>
                                 </button>
                                 <div class="p-4 bg-white hidden">
                                     Reach out for help! You can always ask questions or get guidance from community resources.
@@ -1140,9 +1186,9 @@
         
                             <!-- Question 3 -->
                             <div class="border rounded-lg">
-                                <button class="w-full flex justify-between items-center p-4 text-left font-semibold bg-green-300" onclick="toggleFaq(this)">
+                                <button class="w-full rounded-lg flex justify-between items-center p-4 text-left font-semibold bg-green-300" onclick="toggleFaq(this)">
                                     How do I know I'm making progress?
-                                    <span>&#x25BC;</span>
+                                    <i class="fa-solid fa-angle-down"></i>
                                 </button>
                                 <div class="p-4 bg-white hidden">
                                     You'll see progress through regular updates, feedback, and milestones.
@@ -1151,9 +1197,9 @@
         
                             <!-- Question 4 -->
                             <div class="border rounded-lg">
-                                <button class="w-full flex justify-between items-center p-4 text-left font-semibold bg-green-300" onclick="toggleFaq(this)">
+                                <button class="w-full rounded-lg flex justify-between items-center p-4 text-left font-semibold bg-green-300" onclick="toggleFaq(this)">
                                     How to manage notifications?
-                                    <span>&#x25BC;</span>
+                                    <i class="fa-solid fa-angle-down"></i>
                                 </button>
                                 <div class="p-4 bg-white hidden">
                                     You can manage notifications in the settings section of your account.
@@ -1172,7 +1218,7 @@
                 <div class="grid md:grid-cols-2 gap-10 items-center">
                     <!-- Form Section -->
                     <div>
-                        <form class="bg-white p-6 rounded-lg shadow-md space-y-4">
+                        <form class="p-6 rounded-lg space-y-4">
                             <div>
                                 <label for="full-name" class="block text-lg font-semibold mb-2">Full Name :</label>
                                 <input type="text" id="full-name" name="full-name" placeholder="Enter your Name" class="w-full p-3 border rounded-lg shadow-sm focus:ring-2 focus:ring-purple-400 focus:outline-none">
@@ -1375,17 +1421,25 @@
     </script>
 
 <script>
-    // Toggle FAQ visibility
     function toggleFaq(button) {
-        const content = button.nextElementSibling;
-        const isHidden = content.classList.contains('hidden');
-        document.querySelectorAll('.p-4.bg-white').forEach(div => div.classList.add('hidden'));
-        if (isHidden) {
-            content.classList.remove('hidden');
-        } else {
-            content.classList.add('hidden');
-        }
+    const content = button.nextElementSibling; // Select the sibling div
+    const icon = button.querySelector('i'); // Select the <i> tag within the button
+
+    // Prevent default button behavior
+    event.preventDefault();
+
+    // Toggle the hidden class for content
+    if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.classList.remove('fa-angle-down');
+        icon.classList.add('fa-angle-up');
+    } else {
+        content.classList.add('hidden');
+        icon.classList.remove('fa-angle-up');
+        icon.classList.add('fa-angle-down');
     }
-</script>
+}
+
+    </script>
 </body>
 </html>
