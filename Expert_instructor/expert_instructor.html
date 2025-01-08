@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructors</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+      <!-- Navbar -->
+      <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Left side -->
+                <div class="flex items-center">
+                    <img src="/assests/logo.png" alt="CODERS Logo" class="h-10">
+                    
+                    <!-- Search bar - hidden on mobile -->
+                    <div class="hidden md:flex items-center ml-8">
+                        <div class="relative">
+                            <input type="text" placeholder="কোর্স সার্চ করুন" 
+                                class="w-[300px] pl-10 pr-4 py-2 border border-gray-300 rounded-full text-sm focus:outline-none focus:border-green-500">
+                            <div class="absolute left-3 top-2.5">
+                                <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right side -->
+                <div class="flex items-center">
+                    <!-- Mobile menu button -->
+                    <button type="button" class="md:hidden bg-white p-2 rounded-md">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+
+                    <!-- Desktop menu -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#" class="text-gray-700 hover:text-green-600">লাইভ কোর্স</a>
+                        <a href="#" class="text-gray-700 hover:text-green-600">ফ্রী কোর্স</a>
+                        <a href="/Blog.html" class="text-gray-700 hover:text-green-600">ব্লগ</a>
+                        <a href="#" class="text-gray-700 hover:text-green-600">সব কোর্স</a>
+                        <a href="/auth/login.html" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700">
+                            লগিন / সাইনআপ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+     <!-- Hero Section -->
+     <div
+     class="hero h-[30vh]"
+     style="background-image: url('/assests/Expert_instructor/bg.png'); background-size: cover; background-position: center; object-fit: fill;">
+     <div class="hero-overlay bg-opacity-60"></div>
+     <div class="hero-content text-neutral-content text-center">
+       <div>
+         <h1 class="mb-5 text-5xl font-bold">Meet Our Expert Instructors</h1>
+       </div>
+     </div>
+   </div>
+   
+
+    <!--expert instructor  -->
+    <div class="bg-gray-50 min-h-screen p-4 md:p-8">
+        <div class="container mx-auto max-w-7xl w-full py-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Edward Narton Card -->
+                 <!-- Card 1 -->
+                 <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-16">
+                    <div class="bg-blue-500 aspect-square  flex items-center justify-center ">
+                        <img src="/assests/Expert_instructor/img231.png" alt="Student with folder" class="h-[353px] object-contain absolute mt-[-50px] z-0">
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-500 text-sm">Instructor</p>
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-xl font-semibold">Edward Narton</h3>
+                            <svg class="w-5 h-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- Karen Barnes Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-16">
+                    <div class="bg-blue-500 aspect-square  flex items-center justify-center ">
+                        <img src="/assests/Expert_instructor/team-2-thumb-3.png.webp" alt="Student with folder" class="h-[353px] object-contain absolute mt-[-50px] z-0">
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-500 text-sm">Instructor</p>
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-xl font-semibold">Karen Barnes</h3>
+                            <svg class="w-5 h-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Anthony Wade Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-16">
+                    <div class="bg-blue-500 aspect-square  flex items-center justify-center ">
+                        <img src="/assests/Expert_instructor/TT.png" alt="Student with folder" class="h-[353px] object-contain absolute mt-[-50px] z-0">
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-500 text-sm">Instructor</p>
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-xl font-semibold">Anthony Wade</h3>
+                            <svg class="w-5 h-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Mario Fleming Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-16">
+                    <div class="bg-blue-500 aspect-square  flex items-center justify-center ">
+                        <img src="/assests/Expert_instructor/Untitled design (1).png" alt="Student with folder" class="h-[353px] object-contain absolute mt-[-50px] z-0">
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-500 text-sm">Instructor</p>
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-xl font-semibold">Mario Fleming</h3>
+                            <svg class="w-5 h-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mario Fleming Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-16">
+                    <div class="bg-blue-500 aspect-square  flex items-center justify-center ">
+                        <img src="/assests/Expert_instructor/Untitled design (1).png" alt="Student with folder" class="h-[353px] object-contain absolute mt-[-50px] z-0">
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-500 text-sm">Instructor</p>
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-xl font-semibold">Mario Fleming</h3>
+                            <svg class="w-5 h-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mario Fleming Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-16">
+                    <div class="bg-blue-500 aspect-square  flex items-center justify-center ">
+                        <img src="/assests/Expert_instructor/Untitled design (1).png" alt="Student with folder" class="h-[353px] object-contain absolute mt-[-50px] z-0">
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-500 text-sm">Instructor</p>
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-xl font-semibold">Mario Fleming</h3>
+                            <svg class="w-5 h-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mario Fleming Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-16">
+                    <div class="bg-blue-500 aspect-square  flex items-center justify-center ">
+                        <img src="/assests/Expert_instructor/Untitled design (1).png" alt="Student with folder" class="h-[353px] object-contain absolute mt-[-50px] z-0">
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-500 text-sm">Instructor</p>
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-xl font-semibold">Mario Fleming</h3>
+                            <svg class="w-5 h-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mario Fleming Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-16">
+                    <div class="bg-blue-500 aspect-square  flex items-center justify-center ">
+                        <img src="/assests/Expert_instructor/Untitled design (1).png" alt="Student with folder" class="h-[353px] object-contain absolute mt-[-50px] z-0">
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-500 text-sm">Instructor</p>
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-xl font-semibold">Mario Fleming</h3>
+                            <svg class="w-5 h-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer  -->
+    <div class="bg-purple-50 font-sans">
+        <div class="bg-gray-900 text-white py-12">
+            <div class="max-w-7xl mx-auto px-6 space-y-12">
+                <!-- Heading -->
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold">Ready to start learning? Contact us!</h2>
+                    <p class="text-gray-400 mt-2">Discover a wide range of expert-led courses tailored to your personal and professional growth.</p>
+                </div>
+    
+                <!-- Newsletter and Links -->
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                    <!-- Newsletter Section -->
+                    <div class="col-span-1">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <img src="/assests/footer_logo.png" alt="Logo" class="w-82 h-10">
+                        </div>
+                        <p class="text-gray-400 mb-4">Stay in the loop and sign up for the Wardiere newsletter:</p>
+                        <form class="flex items-center">
+                            <input type="email" placeholder="Enter your email" class="w-full p-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <button class="bg-purple-500 p-3 rounded-r-lg hover:bg-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                    
+    
+                    <!-- Navigation Links -->
+                    <div class="col-span-1">
+                        <h3 class="text-lg font-semibold mb-4">Company</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#" class="hover:text-white">Home</a></li>
+                            <li><a href="#" class="hover:text-white">About</a></li>
+                            <li><a href="#" class="hover:text-white">Solutions</a></li>
+                            <li><a href="#" class="hover:text-white">Pricing</a></li>
+                            <li><a href="#" class="hover:text-white">Team</a></li>
+                            <li><a href="#" class="hover:text-white">Career</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="col-span-1">
+                        <h3 class="text-lg font-semibold mb-4">Documentation</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#" class="hover:text-white">Help Centre</a></li>
+                            <li><a href="#" class="hover:text-white">Contact</a></li>
+                            <li><a href="#" class="hover:text-white">FAQ</a></li>
+                            <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="col-span-1">
+                        <h3 class="text-lg font-semibold mb-4">Social</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#" class="hover:text-white">Facebook</a></li>
+                            <li><a href="#" class="hover:text-white">Instagram</a></li>
+                            <li><a href="#" class="hover:text-white">Youtube</a></li>
+                            <li><a href="#" class="hover:text-white">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- Footer Bottom -->
+                <div class="border-t border-gray-800 pt-6 flex justify-between text-gray-400">
+                    <p>&copy; XYZ Inc. All Rights Reserved 2028</p>
+                    <a href="#" class="hover:text-white">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+
+       </div>
+
+</body>
+</html>

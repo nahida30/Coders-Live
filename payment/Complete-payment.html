@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Payment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+        <!-- Navbar -->
+        <nav class="bg-white shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <!-- Left side -->
+                    <div class="flex items-center">
+                        <img src="/assests/logo.png" alt="CODERS Logo" class="h-10">
+                        
+                        <!-- Search bar - hidden on mobile -->
+                        <div class="hidden md:flex items-center ml-8">
+                            <div class="relative">
+                                <input type="text" placeholder="কোর্স সার্চ করুন" 
+                                    class="w-[300px] pl-10 pr-4 py-2 border border-gray-300 rounded-full text-sm focus:outline-none focus:border-green-500">
+                                <div class="absolute left-3 top-2.5">
+                                    <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Right side -->
+                    <div class="flex items-center">
+                        <!-- Mobile menu button -->
+                        <button type="button" class="md:hidden bg-white p-2 rounded-md">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            </svg>
+                        </button>
+    
+                        <!-- Desktop menu -->
+                        <div class="hidden md:flex items-center space-x-8">
+                            <a href="#" class="text-gray-700 hover:text-green-600">লাইভ কোর্স</a>
+                            <a href="#" class="text-gray-700 hover:text-green-600">ফ্রী কোর্স</a>
+                            <a href="/Blog.html" class="text-gray-700 hover:text-green-600">ব্লগ</a>
+                            <a href="#" class="text-gray-700 hover:text-green-600">সব কোর্স</a>
+                            <a href="/auth/login.html" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700">
+                                লগিন / সাইনআপ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    <div class="container mx-auto px-4 py-8  h-full overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <!-- Left Section -->
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+                <h2 class="text-2xl font-semibold mb-6">Complete payment</h2>
+                
+                <div class="flex items-start gap-4 mb-6">
+                    <img src="/placeholder.svg?height=100&width=150" alt="Course thumbnail" class="w-32 rounded-lg">
+                    <div>
+                        <h3 class="text-lg font-medium">SQA: Manual & Automated Testing</h3>
+                    </div>
+                </div>
+
+                <div class="border-t pt-4">
+                    <div class="flex justify-between mb-4">
+                        <span class="font-medium">Course price</span>
+                        <span class="font-medium">৳ 8000</span>
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-sm text-gray-600">Add a Coupon</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="flex gap-2">
+                            <input type="text" placeholder="Enter Code" class="border rounded px-3 py-2 w-full">
+                            <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between border-t pt-4">
+                        <span class="font-semibold">Total Payment:</span>
+                        <span class="font-semibold">৳ 8000</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+                <h2 class="text-2xl font-semibold mb-6">Payment method</h2>
+
+                <div class="space-y-4">
+                    <!-- bKash Option -->
+                    <label class="block">
+                        <div class="border rounded-lg p-4 cursor-pointer hover:border-green-500 flex items-center gap-4">
+                            <input type="radio" name="payment" class="w-4 h-4 text-green-600" checked>
+                            <img src="/placeholder.svg?height=40&width=120" alt="bKash" class="h-10">
+                        </div>
+                    </label>
+
+                    <!-- Nagad/Rocket Option -->
+                    <label class="block">
+                        <div class="border rounded-lg p-4 cursor-pointer hover:border-green-500 flex items-center gap-4">
+                            <input type="radio" name="payment" class="w-4 h-4 text-green-600">
+                            <div class="flex items-center gap-4">
+                                <img src="/placeholder.svg?height=40&width=80" alt="Nagad" class="h-8">
+                                <img src="/placeholder.svg?height=40&width=80" alt="Rocket" class="h-8">
+                            </div>
+                        </div>
+                    </label>
+
+                    <!-- International Card Option -->
+                    <label class="block">
+                        <div class="border rounded-lg p-4 cursor-pointer hover:border-green-500 flex items-center gap-4">
+                            <input type="radio" name="payment" class="w-4 h-4 text-green-600">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                                </svg>
+                                <span>Pay Internationally (Card)</span>
+                            </div>
+                        </div>
+                    </label>
+
+                    <div class="mt-6 pt-4 border-t">
+                        <div class="flex justify-between mb-4">
+                            <span class="font-medium">Total Payment:</span>
+                            <span class="font-semibold">৳ 8000</span>
+                        </div>
+                        <button id="paymentButton" type="submit"
+                         class="w-full py-2 px-4 bg-green-500 text-white font-medium rounded-md shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-1">
+                            Complete the payment
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
+    </div>
+      <!-- Footer -->
+      <div class="flex justify-between mt-[5rem] text-sm text-gray-600 max-w-7xl mx-auto">
+        <a href="#" class="hover:text-gray-900">Privacy Policy</a>
+        <a href="#" class="hover:text-gray-900">Need Help?</a>
+    </div>
+
+ <!-- Success Message (Modal) -->
+<div id="successContainer" class="hidden fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
+    <div class="w-full max-w-2xl bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="bg-green-500 h-48 flex items-center justify-center">
+            <div class="text-white text-4xl font-light opacity-80">Thanks for Registration!</div>
+        </div>
+        <div class="px-8 py-10 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Registration Successful!</h1>
+            <p class="text-gray-600 mb-8">
+                Please check your email to confirm your registration. If you didn't receive the email, check your spam folder or contact us.
+            </p>
+            <a href="/" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200">
+                Return to Home
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Get references to the payment button and the success message container
+    const paymentButton = document.getElementById('paymentButton');
+    const successContainer = document.getElementById('successContainer');
+
+    // Add event listener to the payment button
+    paymentButton.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent the form from actually submitting
+        // Show the success message modal
+        successContainer.classList.remove('hidden');
+    });
+</script>
+</body>
+</html>

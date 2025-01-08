@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become Instructor</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+     <!-- Navbar -->
+     <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Left side -->
+                <div class="flex items-center">
+                    <img src="/assests/logo.png" alt="CODERS Logo" class="h-10">
+                    
+                    <!-- Search bar - hidden on mobile -->
+                    <div class="hidden md:flex items-center ml-8">
+                        <div class="relative">
+                            <input type="text" placeholder="কোর্স সার্চ করুন" 
+                                class="w-[300px] pl-10 pr-4 py-2 border border-gray-300 rounded-full text-sm focus:outline-none focus:border-green-500">
+                            <div class="absolute left-3 top-2.5">
+                                <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right side -->
+                <div class="flex items-center">
+                    <!-- Mobile menu button -->
+                    <button type="button" class="md:hidden bg-white p-2 rounded-md">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+
+                    <!-- Desktop menu -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#" class="text-gray-700 hover:text-green-600">লাইভ কোর্স</a>
+                        <a href="#" class="text-gray-700 hover:text-green-600">ফ্রী কোর্স</a>
+                        <a href="/Blog.html" class="text-gray-700 hover:text-green-600">ব্লগ</a>
+                        <a href="#" class="text-gray-700 hover:text-green-600">সব কোর্স</a>
+                        <a href="/auth/login.html" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700">
+                            লগিন / সাইনআপ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+     <!-- Hero Section -->
+     <div
+     class="hero h-[30vh]"
+     style="background-image: url('/assests/Instructor/instructor_banner.png'); background-size: cover; background-position: center; object-fit: fill;">
+     <div class="hero-overlay bg-opacity-60"></div>
+     <div class="hero-content text-neutral-content text-center">
+       <div class="max-w-md">
+         <h1 class="mb-5 text-5xl font-bold">Become Instructor</h1>
+       </div>
+     </div>
+   </div>
+   
+
+    <main class="container mx-auto px-4 py-8 max-w-7xl">
+       
+        <!-- Main Content -->
+        <section class="mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
+                How to<br>
+                Become an Instructor
+            </h2>
+
+            <!-- Navigation -->
+            <nav class="flex flex-wrap justify-center gap-8 mb-16 border-b border-gray-200">
+                <a href="#" class="pb-4 px-4 text-gray-900 border-b-2 border-green-400 font-medium">
+                    Become an Instructor
+                </a>
+                <a href="#" class="pb-4 px-4 text-gray-600 hover:text-gray-900 transition-colors">
+                    Instructor Rules
+                </a>
+                <a href="#" class="pb-4 px-4 text-gray-600 hover:text-gray-900 transition-colors">
+                    Start with Courses
+                </a>
+            </nav>
+
+            <!-- Content Grid -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Plan your course</h3>
+                        <p class="text-gray-600">
+                            Neque convallis a cras semper auctor. Libero id faucibus nisl tincidunt egetnvallis a cras semper auctornvallis a cras semper auctor.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">How we help you</h3>
+                        <p class="text-gray-600">
+                            Neque convallis a cras semper auctor. Libero id faucibus nisl tincidunt egetnvallis a cras semper auctor. Liberoe convallis a cras semper atincidunt egetnval
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Illustration -->
+                <div class="relative">
+                    <img src="/placeholder.svg?height=400&width=500" alt="Virtual teaching illustration" class="w-full h-auto">
+                    <!-- Icons -->
+                    <div class="flex gap-4 justify-center mt-6">
+                        <div class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                        </div>
+                        <div class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- instructor form  -->
+     <div class="bg-white min-h-screen flex items-center justify-center p-4">
+        <main class="bg-gray-100 rounded-2xl shadow-lg overflow-hidden max-w-7xl w-full">
+            <div class="flex flex-col md:flex-row">
+                <!-- Left Section with Image -->
+                <div class="relative w-full md:w-1/2">
+                    <img 
+                        src="/assests/Instructor/instructor_form.png" 
+                        alt="Instructor with headphones" 
+                        class="w-full h-full object-cover"
+                    >
+                    <!-- Circular Icons -->
+                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                            </svg>
+                        </div>
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Right Section with Form -->
+                <div class="w-full md:w-1/2 p-8 md:p-12">
+                    <div class="mb-8">
+                        <h1 class="text-3xl font-bold text-gray-900 mb-2">Become an Instructor!</h1>
+                        <p class="text-gray-600">Discover a supportive community of online instructors.</p>
+                    </div>
+    
+                    <form class="space-y-6">
+                        <div>
+                            <label for="fullname" class="block text-sm font-medium text-gray-700 mb-1">Full Name :</label>
+                            <input 
+                                type="text" 
+                                id="fullname" 
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                required
+                            >
+                        </div>
+    
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-Mail :</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                    required
+                                >
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number :</label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                    required
+                                >
+                            </div>
+                        </div>
+    
+                        <div>
+                            <label for="bio" class="block text-sm font-medium text-gray-700 mb-1">Bio :</label>
+                            <textarea 
+                                id="bio" 
+                                rows="4" 
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                required
+                            ></textarea>
+                        </div>
+    
+                        <button 
+                            type="submit" 
+                            class="w-full bg-green-500 text-white py-3 px-6 rounded-md hover:bg-green-600 transition-colors duration-200 flex items-center justify-center gap-2"
+                        >
+                            Become an Instructor
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+     </div>
+
+     <!-- footer  -->
+     <div class="bg-purple-50 font-sans">
+        <div class="bg-gray-900 text-white py-12">
+            <div class="max-w-7xl mx-auto px-6 space-y-12">
+                <!-- Heading -->
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold">Ready to start learning? Contact us!</h2>
+                    <p class="text-gray-400 mt-2">Discover a wide range of expert-led courses tailored to your personal and professional growth.</p>
+                </div>
+    
+                <!-- Newsletter and Links -->
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                    <!-- Newsletter Section -->
+                    <div class="col-span-1">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <img src="/assests/footer_logo.png" alt="Logo" class="w-82 h-10">
+                        </div>
+                        <p class="text-gray-400 mb-4">Stay in the loop and sign up for the Wardiere newsletter:</p>
+                        <form class="flex items-center">
+                            <input type="email" placeholder="Enter your email" class="w-full p-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <button class="bg-purple-500 p-3 rounded-r-lg hover:bg-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                    
+    
+                    <!-- Navigation Links -->
+                    <div class="col-span-1">
+                        <h3 class="text-lg font-semibold mb-4">Company</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#" class="hover:text-white">Home</a></li>
+                            <li><a href="#" class="hover:text-white">About</a></li>
+                            <li><a href="#" class="hover:text-white">Solutions</a></li>
+                            <li><a href="#" class="hover:text-white">Pricing</a></li>
+                            <li><a href="#" class="hover:text-white">Team</a></li>
+                            <li><a href="#" class="hover:text-white">Career</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="col-span-1">
+                        <h3 class="text-lg font-semibold mb-4">Documentation</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#" class="hover:text-white">Help Centre</a></li>
+                            <li><a href="#" class="hover:text-white">Contact</a></li>
+                            <li><a href="#" class="hover:text-white">FAQ</a></li>
+                            <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="col-span-1">
+                        <h3 class="text-lg font-semibold mb-4">Social</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#" class="hover:text-white">Facebook</a></li>
+                            <li><a href="#" class="hover:text-white">Instagram</a></li>
+                            <li><a href="#" class="hover:text-white">Youtube</a></li>
+                            <li><a href="#" class="hover:text-white">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- Footer Bottom -->
+                <div class="border-t border-gray-800 pt-6 flex justify-between text-gray-400">
+                    <p>&copy; XYZ Inc. All Rights Reserved 2028</p>
+                    <a href="#" class="hover:text-white">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+
+       </div>
+</body>
+</html>
