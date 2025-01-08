@@ -88,7 +88,24 @@
 
                     <!-- Desktop menu -->
                     <div class="hidden md:flex items-center space-x-8">
-                        <a href="#" class="text-gray-700 hover:text-green-600">লাইভ কোর্স</a>
+                        <div class="flex bg-white p-1 rounded-lg items-center gap-1">
+                            <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" fill="currentColor">
+                                    <animate 
+                                        attributeName="r" 
+                                        values="2;4;2" 
+                                        dur="1s" 
+                                        repeatCount="indefinite" />
+                                    <animate 
+                                        attributeName="opacity" 
+                                        values="1;0;1" 
+                                        dur="1s" 
+                                        repeatCount="indefinite" />
+                                </circle>
+                            </svg>
+                            <span class="text-gray-700">লাইভ কোর্স</span>
+                        </div>
+                        <!-- <a href="#" class="text-gray-700 hover:text-green-600">লাইভ কোর্স</a> -->
                         <a href="#" class="text-gray-700 hover:text-green-600">ফ্রী কোর্স</a>
                         <a href="/Blog.html" class="text-gray-700 hover:text-green-600">ব্লগ</a>
                         <a href="#" class="text-gray-700 hover:text-green-600">সব কোর্স</a>
@@ -988,65 +1005,65 @@
 
         <!-- Instructors Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <!-- Edward Norton Card -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
-                <div class="bg-blue-400 p-4">
-                    <img src="/placeholder.svg?height=400&width=400" alt="Edward Norton" class="w-full h-64 object-cover rounded-xl">
-                </div>
-                <div class="p-6">
-                    <p class="text-gray-600 text-sm mb-1">Instructor</p>
-                    <div class="flex items-center gap-2">
-                        <h2 class="text-xl font-bold text-gray-900">Edward Norton</h2>
-                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
+           <!-- Card 1 -->
+           <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-16">
+            <div class="bg-blue-500 aspect-square  flex items-center justify-center ">
+                <img src="/assests/index_page/34.png" alt="Student with folder" class="h-[353px] object-contain absolute mt-[-50px] z-0">
+            </div>
+            <div class="p-4">
+                <p class="text-gray-500 text-sm">Instructor</p>
+                <div class="flex items-center gap-2">
+                    <h3 class="text-xl font-semibold">Edward Narton</h3>
+                    <svg class="w-5 h-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
                 </div>
             </div>
+        </div>
 
             <!-- Karen Barnes Card -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
-                <div class="bg-orange-400 p-4">
-                    <img src="/placeholder.svg?height=400&width=400" alt="Karen Barnes" class="w-full h-64 object-cover rounded-xl">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-16">
+                <div class="bg-blue-500 aspect-square  flex items-center justify-center ">
+                    <img src="/assests/index_page/Demo-1-Slider-Image-G.png" alt="Student with folder" class="h-[353px] object-contain absolute mt-[-50px] z-0">
                 </div>
-                <div class="p-6">
-                    <p class="text-gray-600 text-sm mb-1">Instructor</p>
+                <div class="p-4">
+                    <p class="text-gray-500 text-sm">Instructor</p>
                     <div class="flex items-center gap-2">
-                        <h2 class="text-xl font-bold text-gray-900">Karen Barnes</h2>
-                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        <h3 class="text-xl font-semibold">Edward Narton</h3>
+                        <svg class="w-5 h-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                         </svg>
                     </div>
                 </div>
             </div>
 
             <!-- Anthony Wade Card -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
-                <div class="bg-blue-400 p-4">
-                    <img src="/placeholder.svg?height=400&width=400" alt="Anthony Wade" class="w-full h-64 object-cover rounded-xl">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-16">
+                <div class="bg-blue-500 aspect-square  flex items-center justify-center ">
+                    <img src="/assests/index_page/Demo-1-Slider-Image-B.png" alt="Student with folder" class="h-[353px] object-contain absolute mt-[-50px] z-0">
                 </div>
-                <div class="p-6">
-                    <p class="text-gray-600 text-sm mb-1">Instructor</p>
+                <div class="p-4">
+                    <p class="text-gray-500 text-sm">Instructor</p>
                     <div class="flex items-center gap-2">
-                        <h2 class="text-xl font-bold text-gray-900">Anthony Wade</h2>
-                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        <h3 class="text-xl font-semibold">Edward Narton</h3>
+                        <svg class="w-5 h-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                         </svg>
                     </div>
                 </div>
             </div>
 
             <!-- Mario Fleming Card -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
-                <div class="bg-yellow-400 p-4">
-                    <img src="/placeholder.svg?height=400&width=400" alt="Mario Fleming" class="w-full h-64 object-cover rounded-xl">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-16">
+                <div class="bg-blue-500 aspect-square  flex items-center justify-center ">
+                    <img src="/assests/index_page/Image-4.png" alt="Student with folder" class="h-[353px] object-contain absolute mt-[-50px] z-0">
                 </div>
-                <div class="p-6">
-                    <p class="text-gray-600 text-sm mb-1">Instructor</p>
+                <div class="p-4">
+                    <p class="text-gray-500 text-sm">Instructor</p>
                     <div class="flex items-center gap-2">
-                        <h2 class="text-xl font-bold text-gray-900">Mario Fleming</h2>
-                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        <h3 class="text-xl font-semibold">Edward Narton</h3>
+                        <svg class="w-5 h-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                         </svg>
                     </div>
                 </div>

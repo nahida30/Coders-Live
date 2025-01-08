@@ -9,51 +9,70 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50">
-  <!-- Navbar -->
-  <nav class="bg-white shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <!-- Left side -->
-            <div class="flex items-center">
-                <img src="/assests/logo.png" alt="CODERS Logo" class="h-10">
-                
-                <!-- Search bar - hidden on mobile -->
-                <div class="hidden md:flex items-center ml-8">
-                    <div class="relative">
-                        <input type="text" placeholder="কোর্স সার্চ করুন" 
-                            class="w-[300px] pl-10 pr-4 py-2 border border-gray-300 rounded-full text-sm focus:outline-none focus:border-green-500">
-                        <div class="absolute left-3 top-2.5">
-                            <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                            </svg>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Left side -->
+                <div class="flex items-center">
+                    <a href="/">
+                        <img src="/assests/logo.png" alt="CODERS Logo" class="h-10">
+                       </a>
+                    
+                    <!-- Search bar - hidden on mobile -->
+                    <div class="hidden md:flex items-center ml-8">
+                        <div class="relative">
+                            <input type="text" placeholder="কোর্স সার্চ করুন" 
+                                class="w-[300px] pl-10 pr-4 py-2 border border-gray-300 rounded-full text-sm focus:outline-none focus:border-green-500">
+                            <div class="absolute left-3 top-2.5">
+                                <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Right side -->
-            <div class="flex items-center">
-                <!-- Mobile menu button -->
-                <button type="button" class="md:hidden bg-white p-2 rounded-md">
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
+                <!-- Right side -->
+                <div class="flex items-center">
+                    <!-- Mobile menu button -->
+                    <button type="button" class="md:hidden bg-white p-2 rounded-md">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
 
-                <!-- Desktop menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#" class="text-gray-700 hover:text-green-600">লাইভ কোর্স</a>
-                    <a href="#" class="text-gray-700 hover:text-green-600">ফ্রী কোর্স</a>
-                    <a href="/Blog.html" class="text-gray-700 hover:text-green-600">ব্লগ</a>
-                    <a href="#" class="text-gray-700 hover:text-green-600">সব কোর্স</a>
-                    <a href="/auth/login.html" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700">
-                        লগিন / সাইনআপ
-                    </a>
+                    <!-- Desktop menu -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <div class="flex bg-white p-1 rounded-lg items-center gap-1">
+                            <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" fill="currentColor">
+                                    <animate 
+                                        attributeName="r" 
+                                        values="2;4;2" 
+                                        dur="1s" 
+                                        repeatCount="indefinite" />
+                                    <animate 
+                                        attributeName="opacity" 
+                                        values="1;0;1" 
+                                        dur="1s" 
+                                        repeatCount="indefinite" />
+                                </circle>
+                            </svg>
+                            <span class="text-gray-700">লাইভ কোর্স</span>
+                        </div>
+                        <!-- <a href="#" class="text-gray-700 hover:text-green-600">লাইভ কোর্স</a> -->
+                        <a href="#" class="text-gray-700 hover:text-green-600">ফ্রী কোর্স</a>
+                        <a href="/Blog.html" class="text-gray-700 hover:text-green-600">ব্লগ</a>
+                        <a href="#" class="text-gray-700 hover:text-green-600">সব কোর্স</a>
+                        <a href="/auth/login.html" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700">
+                            লগিন / সাইনআপ
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <!-- Blog Header Section -->
     <section class="bg-gradient-to-r from-purple-100 to-green-100 py-10">
