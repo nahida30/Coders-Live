@@ -7,6 +7,30 @@
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* Active navigation link styling */
+        .nav-link.active {
+            color: #1a202c; /* Text color */
+            border-color: #10b981; /* Green underline */
+            font-weight: bold;
+        }
+    
+        /* Hidden section styling */
+        .hidden {
+            display: none;
+        }
+    
+        /* Default nav-link styling */
+        .nav-link {
+            transition: border-color 0.3s, color 0.3s;
+        }
+    
+        /* Hover underline effect */
+        .nav-link:hover {
+            border-color: #10b981;
+        }
+    </style>
 </head>
 <body class="bg-white">
        <!-- Navbar -->
@@ -85,71 +109,61 @@
      </div>
    </div>
    
+   <main class="container mx-auto px-4 py-8 max-w-7xl">
+    <!-- Main Content -->
+    <section class="mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
+            How to<br>Become an Instructor
+        </h2>
 
-    <main class="container mx-auto px-4 py-8 max-w-7xl">
-       
-        <!-- Main Content -->
-        <section class="mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
-                How to<br>
-                Become an Instructor
-            </h2>
+        <!-- Navigation -->
+        <nav class="flex flex-wrap justify-center gap-8 mb-16 border-b border-gray-200">
+            <a href="#"
+                class="nav-link pb-4 px-4 text-gray-900 border-b-2 border-transparent hover:text-gray-900 transition-colors font-medium active"
+                onclick="handleNavigation(event, 'becomeInstructor')">Become an Instructor</a>
+            <a href="#"
+                class="nav-link pb-4 px-4 text-gray-600 border-b-2 border-transparent hover:text-gray-900 transition-colors"
+                onclick="handleNavigation(event, 'instructorRules')">Instructor Rules</a>
+            <a href="#"
+                class="nav-link pb-4 px-4 text-gray-600 border-b-2 border-transparent hover:text-gray-900 transition-colors"
+                onclick="handleNavigation(event, 'startWithCourses')">Start with Courses</a>
+        </nav>
 
-            <!-- Navigation -->
-            <nav class="flex flex-wrap justify-center gap-8 mb-16 border-b border-gray-200">
-                <a href="#" class="pb-4 px-4 text-gray-900 border-b-2 border-green-400 font-medium">
-                    Become an Instructor
-                </a>
-                <a href="#" class="pb-4 px-4 text-gray-600 hover:text-gray-900 transition-colors">
-                    Instructor Rules
-                </a>
-                <a href="#" class="pb-4 px-4 text-gray-600 hover:text-gray-900 transition-colors">
-                    Start with Courses
-                </a>
-            </nav>
-
-            <!-- Content Grid -->
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-8">
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Plan your course</h3>
-                        <p class="text-gray-600">
-                            Neque convallis a cras semper auctor. Libero id faucibus nisl tincidunt egetnvallis a cras semper auctornvallis a cras semper auctor.
-                        </p>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">How we help you</h3>
-                        <p class="text-gray-600">
-                            Neque convallis a cras semper auctor. Libero id faucibus nisl tincidunt egetnvallis a cras semper auctor. Liberoe convallis a cras semper atincidunt egetnval
-                        </p>
-                    </div>
+        <!-- Content Grid -->
+        <div id="becomeInstructor" class="content-section grid px-12 md:grid-cols-2 items-center">
+            <div class="px-8 space-y-8 font-poppins">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Plan your course</h3>
+                    <p class="text-gray-600">
+                        Neque convallis a cras semper auctor. Libero id faucibus nisl tincidunt egetnvallis a cras semper
+                        auctor.
+                    </p>
                 </div>
-
-                <!-- Illustration -->
-                <div class="relative">
-                    <img src="/placeholder.svg?height=400&width=500" alt="Virtual teaching illustration" class="w-full h-auto">
-                    <!-- Icons -->
-                    <div class="flex gap-4 justify-center mt-6">
-                        <div class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                            </svg>
-                        </div>
-                        <div class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                            </svg>
-                        </div>
-                        <div class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-                            </svg>
-                        </div>
-                    </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">How we help you</h3>
+                    <p class="text-gray-600">
+                        Neque convallis a cras semper auctor. Libero id faucibus nisl tincidunt egetnvallis a cras semper
+                        auctor.
+                    </p>
                 </div>
             </div>
-        </section>
-    </main>
+            <div class="relative">
+                <img src="/assests/Instructor/instructor_image.svg" alt="Virtual teaching illustration"
+                    class="w-96 h-96">
+            </div>
+        </div>
+
+        <div id="instructorRules" class="content-section hidden">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Instructor Rules</h3>
+            <p class="text-gray-600">Content about instructor rules will appear here.</p>
+        </div>
+
+        <div id="startWithCourses" class="content-section hidden">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Start with Courses</h3>
+            <p class="text-gray-600">Content about starting with courses will appear here.</p>
+        </div>
+    </section>
+</main>
 
     <!-- instructor form  -->
      <div class="bg-white min-h-screen flex items-center justify-center p-4">
@@ -233,7 +247,7 @@
     
                         <button 
                             type="submit" 
-                            class="w-full bg-green-500 text-white py-3 px-6 rounded-md hover:bg-green-600 transition-colors duration-200 flex items-center justify-center gap-2"
+                            class="w-full bg-[#1f8d16] text-white py-3 px-6 rounded-md hover:bg-green-600 transition-colors duration-200 flex items-center justify-center gap-2"
                         >
                             Become an Instructor
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -319,5 +333,35 @@
         </div>
 
        </div>
+
+       <script>
+        function handleNavigation(event, sectionId) {
+            // Prevent default link behavior
+            event.preventDefault();
+    
+            // Remove active class and border from all nav links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                link.classList.remove('text-gray-900');
+                link.classList.add('text-gray-600');
+                link.classList.add('border-transparent');
+            });
+    
+            // Add active class to the clicked link
+            const targetLink = event.target;
+            targetLink.classList.add('active');
+            targetLink.classList.remove('text-gray-600');
+            targetLink.classList.add('text-gray-900');
+            targetLink.classList.remove('border-transparent');
+    
+            // Hide all content sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.classList.add('hidden'));
+    
+            // Show the selected content section
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
