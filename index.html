@@ -10,6 +10,11 @@
    <!-- font awesome  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+      <!-- Include Flatpickr CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+      <!-- Include Flatpickr JS -->
+      <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
    <script>
     tailwind.config = {
         theme: {
@@ -17,7 +22,10 @@
                 colors: {
                     'navy': '#0a0f2c',
                     'accent': '#00f200',
-                }
+                },
+                fontFamily: {
+                siliguri: ['Hind Siliguri', 'sans-serif'],
+                 },
             }
         }
     }
@@ -126,7 +134,7 @@
                 <!-- Left Content -->
                 <div class="space-y-8">
                     <div>
-                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-siliguri">
                             স্কিল ডেভেলপ করে..
                         </h1>
                         <h2 class="text-2xl md:text-3xl font-bold text-green-600 mt-4">
@@ -139,10 +147,12 @@
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-wrap gap-4">
-                        <button class="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors">
+                        <button class="bg-green-600 font-semibold text-white h-10 px-6 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center gap-3">
                             সকল কোর্স
+                            <i class="fa-solid fa-arrow-right text-xl"></i>
                         </button>
-                        <button class="text-green-600 px-8 py-3  flex items-center gap-2">
+                        
+                        <button class="text-green-600 h-10 px-8 py-3  flex items-center gap-2">
                             <img src="/assests/index_page/play_icon.svg" alt="">
                             শেখা শুরু করুন
                             
@@ -158,8 +168,8 @@
 
                 <!-- Right Image -->
                 <div class="relative">
-                    <div class="absolute right-0 top-0 w-4/5 h-full bg-green-500 rounded-l-full"></div>
-                    <img src="/assests/banner.png" alt="Student with books" 
+                    <div class="absolute top-[10%] left-1/2 -translate-x-1/2 w-[100%] h-[60%] bg-[#00f200] rounded-[70px] rotate-[-15deg]"></div>
+                    <img src="/assests/Untitled design.png" alt="Student with books" 
                         class="relative z-10 w-full h-auto">
                 </div>
             </div>
@@ -362,8 +372,9 @@
                         </div>
                     </div>
                     <div class="flex justify-center mt-auto py-6">
-                        <button class="w-80 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
-                            বিস্তারিত দেখি →
+                        <button class="w-80 py-2 bg-gray-200 font-semibold rounded-lg hover:bg-gray-300 transition-colors">
+                            বিস্তারিত দেখি 
+                            <i class="fa-solid fa-arrow-right text-xl"></i>
                         </button>
                     </div>
                 </div>
@@ -417,8 +428,9 @@
                         </div>
                     </div>
                     <div class="flex justify-center mt-auto py-6">
-                        <button class="w-80 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
-                            বিস্তারিত দেখি →
+                        <button class="w-80 py-2 bg-gray-200 font-semibold rounded-lg hover:bg-gray-300 transition-colors">
+                            বিস্তারিত দেখি 
+                            <i class="fa-solid fa-arrow-right text-xl"></i>
                         </button>
                     </div>
                 </div>
@@ -471,8 +483,9 @@
                         </div>
                     </div>
                     <div class="flex justify-center mt-auto py-6">
-                        <button class="w-80 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
-                            বিস্তারিত দেখি →
+                        <button class="w-80 py-2 bg-gray-200 font-semibold rounded-lg hover:bg-gray-300 transition-colors">
+                            বিস্তারিত দেখি 
+                            <i class="fa-solid fa-arrow-right text-xl"></i>
                         </button>
                     </div>
                 </div>
@@ -538,8 +551,9 @@
                         </div>
                     </div>
                     <div class="flex justify-center mt-auto py-6">
-                        <button class="w-80 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
-                            বিস্তারিত দেখি →
+                        <button class="w-80 py-2 bg-gray-200 font-semibold rounded-lg hover:bg-gray-300 transition-colors">
+                            বিস্তারিত দেখি 
+                            <i class="fa-solid fa-arrow-right text-xl"></i>
                         </button>
                     </div>
                 </div>
@@ -592,8 +606,9 @@
                         </div>
                     </div>
                     <div class="flex justify-center mt-auto py-6">
-                        <button class="w-80 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
-                            বিস্তারিত দেখি →
+                        <button class="w-80 py-2 bg-gray-200 font-semibold rounded-lg hover:bg-gray-300 transition-colors">
+                            বিস্তারিত দেখি 
+                            <i class="fa-solid fa-arrow-right text-xl"></i>
                         </button>
                     </div>
                 </div>
@@ -646,8 +661,9 @@
                         </div>
                     </div>
                     <div class="flex justify-center mt-auto py-6">
-                        <button class="w-80 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
-                            বিস্তারিত দেখি →
+                        <button class="w-80 py-2 bg-gray-200 font-semibold rounded-lg hover:bg-gray-300 transition-colors">
+                            বিস্তারিত দেখি 
+                            <i class="fa-solid fa-arrow-right text-xl"></i>
                         </button>
                     </div>
                 </div>
@@ -720,15 +736,16 @@
                     </div>
     
                     <!-- Testimonial Text -->
-                    <div class="relative pl-8 mb-8 mt-8">
-                        <blockquote class="quote-mark text-gray-700 text-lg leading-relaxed">
+                    <img src="/assests/img_1.png" alt="" class="w-8 h-6">
+                    <div class="relative mb-8 mt-4">
+                          
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed tincidunt velit. Donec bibendum turpis vitae maximus bibendum.
-                        </blockquote>
+                       
                     </div>
     
                     <!-- Author Info -->
                     <div class="flex items-center">
-                        <img src="/placeholder.svg?height=48&width=48" alt="Teddy Yu" class="w-12 h-12 rounded-full mr-4">
+                        <img src="/assests/feedback/r2.png" alt="Teddy Yu" class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold text-gray-900">Teddy Yu</h4>
                             <p class="text-gray-600">SQA: Batch 5</p>
@@ -758,15 +775,16 @@
                     </div>
     
                     <!-- Testimonial Text -->
-                    <div class="relative pl-8 mb-8 mt-8">
-                        <blockquote class="quote-mark text-gray-700 text-lg leading-relaxed">
+                    <img src="/assests/img_1.png" alt="" class="w-8 h-6">
+                    <div class="relative mb-8 mt-4">
+                          
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed tincidunt velit. Donec bibendum turpis vitae maximus bibendum.
-                        </blockquote>
+                       
                     </div>
     
                     <!-- Author Info -->
                     <div class="flex items-center">
-                        <img src="/placeholder.svg?height=48&width=48" alt="Mariana Napolitani" class="w-12 h-12 rounded-full mr-4">
+                        <img src="/assests/feedback/r1.png" alt="Mariana Napolitani" class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold text-gray-900">Mariana Napolitani</h4>
                             <p class="text-gray-600">Creative Director</p>
@@ -796,15 +814,16 @@
                     </div>
     
                     <!-- Testimonial Text -->
-                    <div class="relative pl-8 mb-8 mt-8">
-                        <blockquote class="quote-mark text-gray-700 text-lg leading-relaxed">
+                    <img src="/assests/img_1.png" alt="" class="w-8 h-6">
+                    <div class="relative mb-8 mt-4">
+                          
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed tincidunt velit. Donec bibendum turpis vitae maximus bibendum.
-                        </blockquote>
+                       
                     </div>
     
                     <!-- Author Info -->
                     <div class="flex items-center">
-                        <img src="/placeholder.svg?height=48&width=48" alt="Jamie Chastain" class="w-12 h-12 rounded-full mr-4">
+                        <img src="/assests/feedback/r3.png" alt="Jamie Chastain" class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold text-gray-900">Jamie Chastain</h4>
                             <p class="text-gray-600">Sales Manager</p>
@@ -880,7 +899,16 @@
                                 </div>
                             </div>
                             <h3 class="text-xl font-bold mb-4 px-4">SQA: Manual & Automated Testing</h3>
+
+                              <!-- Date Picker -->
+            <div class="flex px-4 items-center gap-2 text-gray-600 cursor-pointer" id="datePickerContainer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <input type="text" id="datePicker" class="text-gray-600 bg-transparent cursor-pointer" readonly>
+            </div>
                         </div>
+                        
                     </div>
                     <div class="flex justify-center mt-auto py-6">
                         <button class="w-80 py-2 bg-[#d8ffd8] rounded-lg hover:bg-[#d8ffd8] transition-colors">
@@ -915,6 +943,14 @@
                                 </div>
                             </div>
                             <h3 class="text-xl font-bold mb-4 px-4">Java Programming Masterclass for Software Developers</h3>
+
+                              <!-- Date Picker -->
+            <div class="flex px-4 items-center gap-2 text-gray-600 cursor-pointer" id="datePickerContainer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <input type="text" id="datePicker" class="text-gray-600 bg-transparent cursor-pointer" readonly>
+            </div>
                         </div>
                     </div>
                     <div class="flex justify-center mt-auto py-6">
@@ -950,6 +986,14 @@
                                 </div>
                             </div>
                             <h3 class="text-xl font-bold mb-4 px-4">Complete Web & Mobile Designer in 2025 UI/UX</h3>
+
+                              <!-- Date Picker -->
+            <div class="flex px-4 items-center gap-2 text-gray-600 cursor-pointer" id="datePickerContainer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <input type="text" id="datePicker" class="text-gray-600 bg-transparent cursor-pointer" readonly>
+            </div>
                         </div>
                     </div>
                     <div class="flex justify-center mt-auto py-6">
@@ -1110,7 +1154,7 @@
         <!-- Stats Section -->
         <section class="bg-slate-900 rounded-3xl mx-4 md:mx-8 lg:mx-auto lg:max-w-7xl lg: mb-16 mt-6 md:mt-8">
             <div class="container mx-auto px-6 py-16">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div class="grid grid-cols-1 lg:flex lg:justify-between items-center">
                     <!-- Left Content -->
                     <div>
                         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-green-500 leading-tight">
@@ -1120,10 +1164,10 @@
                     </div>
     
                     <!-- Right Stats -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex gap-8 font-poppins">
                         <!-- Stat Card 1 -->
-                        <div class="bg-green-100 rounded-2xl p-6">
-                            <div class="text-4xl font-bold text-slate-900 mb-2">90%</div>
+                        <div class="w-44 bg-green-100 rounded-2xl p-6">
+                            <div class="text-[44px] font-bold text-[#f5a73f]">90%</div>
                             <h3 class="text-lg font-semibold text-slate-900 mb-2">Learners</h3>
                             <p class="text-sm text-slate-700">
                                 Feel more confident when applying for jobs
@@ -1131,8 +1175,8 @@
                         </div>
     
                         <!-- Stat Card 2 -->
-                        <div class="bg-green-100 rounded-2xl p-6">
-                            <div class="text-4xl font-bold text-slate-900 mb-2">6k+</div>
+                        <div class="w-44 bg-green-100 rounded-2xl p-6">
+                            <div class="text-[44px] font-bold text-[#1f8d16]">6k+</div>
                             <h3 class="text-lg font-semibold text-slate-900 mb-2">Learners</h3>
                             <p class="text-sm text-slate-700">
                                 Became better at their job
@@ -1188,7 +1232,7 @@
         </div>
 
         <!-- Newsletter Section -->
-        <div class="bg-slate-800 rounded-xl p-8 text-center">
+        <div class="p-8 text-center">
             <div class="max-w-2xl mx-auto">
                 <div class="flex items-center justify-center gap-2 mb-4">
                     <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1196,19 +1240,20 @@
                     </svg>
                     <h2 class="text-xl font-bold text-white">নিউজলেটার পেতে সাবস্ক্রাইব করুন</h2>
                 </div>
-                <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <div class="relative flex mx-auto items-center w-[70%]">
                     <input 
                         type="email" 
                         placeholder="এখানে ইমেইল প্রদান লিখুন" 
-                        class="flex-1 px-4 py-2 rounded-lg bg-slate-700 text-white border border-slate-600 focus:outline-none focus:border-green-500"
+                        class="flex-1 px-4 py-2 rounded-lg text-slate-700 border border-slate-600 focus:outline-none focus:border-green-500 pr-16"
                     >
-                    <button class="px-6 py-2 bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg transition-colors duration-200 flex items-center justify-center gap-2">
+                    <button class="absolute right-1 top-1 bottom-1 px-4 bg-[#00ad19] hover:bg-green-600 text-white font-medium rounded-lg transition-colors duration-200 flex items-center justify-center gap-2">
                         সাবস্ক্রাইব করুন
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                         </svg>
                     </button>
                 </div>
+                
             </div>
         </div>
 
@@ -1230,57 +1275,95 @@
                     <div class="flex justify-center md:justify-start">
                         <div class="relative">
                             <img src="/assests/FAQ.png" alt="Woman with laptop" class="rounded-lg">
-                            <div class="absolute top-0 left-0 w-full h-full bg-blue-500/10 -z-10 rounded-lg"></div>
+                            <div class="absolute top-0 left-0 w-full h-86 bg-blue-500/10 -z-10 rounded-lg"></div>
                         </div>
                     </div>
         
                     <!-- FAQ Items -->
-                    <div>
+                    <div class="font-poppins">
                         <div class="space-y-4">
                             <!-- FAQ Questions here -->
-                            <!-- Example for Question 1 -->
-                            <div class="border rounded-lg">
-                                <button class="w-full rounded-lg flex justify-between items-center p-4 text-left font-semibold bg-green-300" onclick="toggleFaq(this)">
+                            <div class="rounded-lg p-4">
+                                <!-- First Accordion Item -->
+                                <div class="mb-2 rounded-lg overflow-hidden">
+                                  <input type="radio" name="faq-accordion" id="faq1" class="hidden peer" checked />
+                                  <label
+                                    for="faq1"
+                                    class="flex justify-between items-center p-4 text-lg font-semibold bg-white border border-gray-200 rounded-lg cursor-pointer transition duration-300 peer-checked:bg-green-600 peer-checked:text-white"
+                                  >
                                     How much time do I need to commit each week?
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </button>
-                                <div class="p-4 bg-white hidden">
-                                    That's totally up to you! You can spend as little or as much time as you want. Remember, practice makes perfect!
+                                    <i
+                                      class="fa-solid fa-angle-down transform transition duration-300 peer-checked:rotate-180"
+                                    ></i>
+                                  </label>
+                                  <div
+                                    class="bg-white border border-t-0 border-gray-200 p-4 text-sm hidden peer-checked:block"
+                                  >
+                                    <p>
+                                      That's totally up to you! You can spend as little or as much time as you want. Remember,
+                                      practice makes perfect!
+                                    </p>
+                                  </div>
                                 </div>
-                            </div>
-        
-                            <!-- Question 2 -->
-                            <div class="border rounded-lg">
-                                <button class="w-full rounded-lg flex justify-between items-center p-4 text-left font-semibold bg-green-300" onclick="toggleFaq(this)">
+                              
+                                <!-- Second Accordion Item -->
+                                <div class="mb-2 rounded-lg overflow-hidden">
+                                  <input type="radio" name="faq-accordion" id="faq2" class="hidden peer" />
+                                  <label
+                                    for="faq2"
+                                    class="flex justify-between items-center p-4 text-lg font-semibold bg-white border border-gray-200 rounded-lg cursor-pointer transition duration-300 peer-checked:bg-green-600 peer-checked:text-white"
+                                  >
                                     What if I get stuck on something?
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </button>
-                                <div class="p-4 bg-white hidden">
-                                    Reach out for help! You can always ask questions or get guidance from community resources.
+                                    <i
+                                      class="fa-solid fa-angle-down transform transition duration-300 peer-checked:rotate-180"
+                                    ></i>
+                                  </label>
+                                  <div
+                                    class="bg-white border border-t-0 border-gray-200 p-4 text-sm hidden peer-checked:block"
+                                  >
+                                    <p>Don’t worry! We’re here to help. Reach out to your mentor or the support team.</p>
+                                  </div>
                                 </div>
-                            </div>
-        
-                            <!-- Question 3 -->
-                            <div class="border rounded-lg">
-                                <button class="w-full rounded-lg flex justify-between items-center p-4 text-left font-semibold bg-green-300" onclick="toggleFaq(this)">
+                              
+                                <!-- Third Accordion Item -->
+                                <div class="mb-2 rounded-lg overflow-hidden">
+                                  <input type="radio" name="faq-accordion" id="faq3" class="hidden peer" />
+                                  <label
+                                    for="faq3"
+                                    class="flex justify-between items-center p-4 text-lg font-semibold bg-white border border-gray-200 rounded-lg cursor-pointer transition duration-300 peer-checked:bg-green-600 peer-checked:text-white"
+                                  >
                                     How do I know I'm making progress?
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </button>
-                                <div class="p-4 bg-white hidden">
-                                    You'll see progress through regular updates, feedback, and milestones.
+                                    <i
+                                      class="fa-solid fa-angle-down transform transition duration-300 peer-checked:rotate-180"
+                                    ></i>
+                                  </label>
+                                  <div
+                                    class="bg-white border border-t-0 border-gray-200 p-4 text-sm hidden peer-checked:block"
+                                  >
+                                    <p>Our tools track your progress so you can see how far you’ve come!</p>
+                                  </div>
                                 </div>
-                            </div>
-        
-                            <!-- Question 4 -->
-                            <div class="border rounded-lg">
-                                <button class="w-full rounded-lg flex justify-between items-center p-4 text-left font-semibold bg-green-300" onclick="toggleFaq(this)">
+                              
+                                <!-- Fourth Accordion Item -->
+                                <div class="rounded-lg overflow-hidden">
+                                  <input type="radio" name="faq-accordion" id="faq4" class="hidden peer" />
+                                  <label
+                                    for="faq4"
+                                    class="flex justify-between items-center p-4 text-lg font-semibold bg-white border border-gray-200 rounded-lg cursor-pointer transition duration-300 peer-checked:bg-green-600 peer-checked:text-white"
+                                  >
                                     How to manage notifications?
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </button>
-                                <div class="p-4 bg-white hidden">
-                                    You can manage notifications in the settings section of your account.
+                                    <i
+                                      class="fa-solid fa-angle-down transform transition duration-300 peer-checked:rotate-180"
+                                    ></i>
+                                  </label>
+                                  <div
+                                    class="bg-white border border-t-0 border-gray-200 p-4 text-sm hidden peer-checked:block"
+                                  >
+                                    <p>Manage notifications from your profile settings to avoid unnecessary interruptions.</p>
+                                  </div>
                                 </div>
-                            </div>
+                              </div>
+                              
                         </div>
                     </div>
                 </div>
@@ -1355,16 +1438,25 @@
 
           </div>
 
+          <!-- 12th pre-footer  -->
+          <div class="hero bg-[#efeeff] font-poppins">
+            <div class="hero-content text-center">
+         
+               <!-- Heading -->
+               <div class="text-center p-8">
+                <h2 class="text-[44px] font-bold">Ready to start learning? Contact us!</h2>
+                <p class="text-black mt-2">Discover a wide range of expert-led courses tailored to your personal and professional growth.</p>
+            </div>
+
+      
+            </div>
+          </div>
+
           <!-- 12th footer  -->
            <div class="bg-purple-50 font-sans">
             <div class="bg-gray-900 text-white py-12 rounded-t-[40px]">
                 <div class="max-w-7xl mx-auto px-6 space-y-12">
-                    <!-- Heading -->
-                    <div class="text-center">
-                        <h2 class="text-3xl font-bold">Ready to start learning? Contact us!</h2>
-                        <p class="text-gray-400 mt-2">Discover a wide range of expert-led courses tailored to your personal and professional growth.</p>
-                    </div>
-        
+                    
                     <!-- Newsletter and Links -->
                     <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
                         <!-- Newsletter Section -->
@@ -1516,6 +1608,25 @@
     }
 }
 
-    </script>
+</script>
+
+<script>
+    // Initialize Flatpickr
+    const fp = flatpickr("#datePicker", {
+        dateFormat: "d F Y",
+        defaultDate: "2029-11-33",
+        disableMobile: "true",
+        allowInput: true,
+        clickOpens: false,
+        onChange: function(selectedDates, dateStr, instance) {
+            instance.element.value = dateStr;
+        }
+    });
+
+    // Open calendar on click
+    document.getElementById('datePickerContainer').addEventListener('click', function() {
+        fp.open();
+    });
+</script>
 </body>
 </html>
