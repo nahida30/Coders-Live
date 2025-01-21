@@ -31,6 +31,13 @@
     }
 </script>
    <style>
+     .menu-slide {
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+    .menu-slide.open {
+        transform: translateX(0);
+    }
     
    .quote-mark::before {
         content: '"';
@@ -64,9 +71,9 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="bg-white shadow-sm">
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+            <div class="flex justify-between items-center h-16">
                 <!-- Left side -->
                 <div class="flex items-center">
                     <img src="/assests/logo.png" alt="CODERS Logo" class="h-10">
@@ -84,36 +91,18 @@
                         </div>
                     </div>
                 </div>
-
+    
                 <!-- Right side -->
                 <div class="flex items-center">
                     <!-- Mobile menu button -->
-                    <button type="button" class="md:hidden bg-white p-2 rounded-md">
+                    <button id="mobile-menu-btn" type="button" class="md:hidden bg-white p-2 rounded-md">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                         </svg>
                     </button>
-
+    
                     <!-- Desktop menu -->
                     <div class="hidden md:flex items-center space-x-8">
-                        <div class="flex bg-white p-1 rounded-lg items-center gap-1">
-                            <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" fill="currentColor">
-                                    <animate 
-                                        attributeName="r" 
-                                        values="2;4;2" 
-                                        dur="1s" 
-                                        repeatCount="indefinite" />
-                                    <animate 
-                                        attributeName="opacity" 
-                                        values="1;0;1" 
-                                        dur="1s" 
-                                        repeatCount="indefinite" />
-                                </circle>
-                            </svg>
-                            <span class="text-gray-700">লাইভ কোর্স</span>
-                        </div>
-                        <!-- <a href="#" class="text-gray-700 hover:text-green-600">লাইভ কোর্স</a> -->
                         <a href="#" class="text-gray-700 hover:text-green-600">ফ্রী কোর্স</a>
                         <a href="/Blog.html" class="text-gray-700 hover:text-green-600">ব্লগ</a>
                         <a href="#" class="text-gray-700 hover:text-green-600">সব কোর্স</a>
@@ -122,6 +111,25 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="menu-slide bg-white fixed top-0 right-0 bottom-0 w-2/3 z-50 p-4 md:hidden">
+            <div class="flex justify-end">
+                <button id="close-menu-btn" class="text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="space-y-6 mt-10">
+                <a href="#" class="text-gray-700 hover:text-green-600 block">ফ্রী কোর্স</a>
+                <a href="/Blog.html" class="text-gray-700 hover:text-green-600 block">ব্লগ</a>
+                <a href="#" class="text-gray-700 hover:text-green-600 block">সব কোর্স</a>
+                <a href="/auth/login.html" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 block">
+                    লগিন / সাইনআপ
+                </a>
             </div>
         </div>
     </nav>
@@ -299,7 +307,7 @@
             </div>
         
 <!-- right CTA -->
-            <div class="relative overflow-visible rounded-3xl bg-gradient-to-r from-green-400 to-green-300  h-[300px] flex items-center">
+            <div class="relative overflow-visible rounded-3xl bg-gradient-to-r from-green-400 to-green-300  h-[300px] flex items-center mt-32 sm:mt-0">
                 <div class="flex justify-between items-center w-full">
                     <img src="assests/human2.png" alt="Student with folder" class="h-[400px] object-contain absolute right-0 bottom-0 z-0">
                     <div class="flex-1 z-10 p-8"> 
@@ -1881,5 +1889,20 @@
       }
     });
   </script>
+
+<script>
+    // Mobile menu toggle functionality
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('open');
+    });
+
+    closeMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+    });
+</script>
 </body>
 </html>
