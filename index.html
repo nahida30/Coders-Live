@@ -847,164 +847,393 @@
 
     <!-- 6th upocoming live courses  -->
     <div class="bg-[#efefef] p-4 md:p-8">
-        <div class="max-w-7xl mx-auto">
-            
+        <div class="container max-w-7xl mx-auto">
+           <!-- Header -->
+           <div class="flex justify-between items-center mb-16 relative">
             <!-- Header -->
-            <div class="flex justify-between items-center mb-16 relative">
-                <!-- Header -->
-                <h1 class="text-3xl md:text-4xl font-bold text-center flex-grow">
-                    আপকামিং লাইভ কোর্স
-                    <div class="h-1 w-32 bg-green-500 mx-auto mt-2"></div>
-                </h1>
-            
-                <!-- Top Navigation Buttons -->
-                <div class="flex gap-2">
-                    <button class="bg-white p-2 rounded-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#37c760]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </button>
-                    <button class="bg-white hover:bg-white/20 transition-colors p-2 rounded-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#37c760]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-    
-            <!-- Course Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- SQA Course Card -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col justify-between h-full">
-                    <div>
-                        <div class="relative p-1">
-                            <img src="/assests/sqa.png" alt="SQA Course" class="w-full h-56 rounded-lg object-cover p-1">
-                        </div>
-                        <div class="p-1">
-                            <!-- Course Meta -->
-                            <div class="flex justify-between px-4 items-center gap-4 mb-4 text-sm w-full bg-gray-200 rounded-lg transition-colors py-2">
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    <span>Batch 25</span>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                                    </svg>
-                                    <span>Total Seat 180</span>
-                                </div>
-                                <div class="flex bg-white p-1 rounded-lg items-center gap-1">
-                                    <span>Upcoming</span>
-                                </div>
-                            </div>
-                            <h3 class="text-xl font-bold mb-4 px-4">SQA: Manual & Automated Testing</h3>
-
-                              <!-- Date Picker -->
-            <div class="flex px-4 items-center gap-2 text-gray-600 cursor-pointer" id="datePickerContainer">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <input type="text" id="datePicker" class="text-gray-600 bg-transparent cursor-pointer" readonly>
-            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="flex justify-center mt-auto py-6">
-                        <button class="w-80 py-2 bg-[#d8ffd8] rounded-lg hover:bg-[#d8ffd8] transition-colors">
-                            বিস্তারিত দেখি →
-                        </button>
-                    </div>
-                </div>
-    
-                <!-- Java Programming Card -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col justify-between h-full">
-                    <div>
-                        <div class="relative p-1">
-                            <img src="/assests/java.png" alt="SQA Course" class="w-full h-56 rounded-lg object-cover p-1">
-                        </div>
-                        <div class="p-1">
-                            <!-- Course Meta -->
-                            <div class="flex justify-between px-4 items-center gap-4 mb-4 text-sm w-full bg-gray-200 rounded-lg transition-colors py-2">
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    <span>Batch 25</span>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                                    </svg>
-                                    <span>Total Seat 180</span>
-                                </div>
-                                <div class="flex bg-white p-1 rounded-lg items-center gap-1">
-                                    <span>Upcoming</span>
-                                </div>
-                            </div>
-                            <h3 class="text-xl font-bold mb-4 px-4">Java Programming Masterclass for Software Developers</h3>
-
-                              <!-- Date Picker -->
-            <div class="flex px-4 items-center gap-2 text-gray-600 cursor-pointer" id="datePickerContainer">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <input type="text" id="datePicker" class="text-gray-600 bg-transparent cursor-pointer" readonly>
-            </div>
-                        </div>
-                    </div>
-                    <div class="flex justify-center mt-auto py-6">
-                        <button class="w-80 py-2 bg-[#d8ffd8] rounded-lg hover:bg-[#d8ffd8] transition-colors">
-                            বিস্তারিত দেখি →
-                        </button>
-                    </div>
-                </div>
-    
-                <!-- UI/UX Design Card -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col justify-between h-full">
-                    <div>
-                        <div class="relative p-1">
-                            <img src="/assests/design.png" alt="SQA Course" class="w-full h-56 rounded-lg object-cover p-1">
-                        </div>
-                        <div class="p-1">
-                            <!-- Course Meta -->
-                            <div class="flex justify-between px-4 items-center gap-4 mb-4 text-sm w-full bg-gray-200 rounded-lg transition-colors py-2">
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    <span>Batch 25</span>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                                    </svg>
-                                    <span>Total Seat 180</span>
-                                </div>
-                                <div class="flex bg-white p-1 rounded-lg items-center gap-1">
-                                    <span>Upcoming</span>
-                                </div>
-                            </div>
-                            <h3 class="text-xl font-bold mb-4 px-4">Complete Web & Mobile Designer in 2025 UI/UX</h3>
-
-                              <!-- Date Picker -->
-            <div class="flex px-4 items-center gap-2 text-gray-600 cursor-pointer" id="datePickerContainer">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <input type="text" id="datePicker" class="text-gray-600 bg-transparent cursor-pointer" readonly>
-            </div>
-                        </div>
-                    </div>
-                    <div class="flex justify-center mt-auto py-6">
-                        <button class="w-80 py-2 bg-[#d8ffd8] rounded-lg hover:bg-[#d8ffd8] transition-colors">
-                            বিস্তারিত দেখি →
-                        </button>
-                    </div>
-                </div>
+            <h1 class="text-3xl md:text-4xl font-bold text-center flex-grow">
+                আপকামিং লাইভ কোর্স
+                <div class="h-1 w-32 bg-green-500 mx-auto mt-2"></div>
+            </h1>
+        
+            <!-- Top Navigation Buttons -->
+            <div class="flex gap-2">
+                <button id="prevBtn" class="bg-white p-2 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#37c760]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="nextBtn" class="bg-white hover:bg-white/20 transition-colors p-2 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#37c760]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
             </div>
         </div>
+
+          
+            <!-- Slider Wrapper -->
+            <div class="overflow-hidden relative">
+              <div
+                id="slider"
+                class="flex space-x-2 transition-transform duration-300"
+              >
+                <!-- Card -->
+                <div
+                  class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 bg-white rounded-xl shadow-lg overflow-hidden flex flex-col justify-between h-96"
+                >
+                  <div>
+                    <div class="relative p-2">
+                      <img
+                        src="/assests/sqa.png"
+                        alt="SQA Course"
+                        class="w-full h-40 rounded-lg object-cover"
+                      />
+                    </div>
+                    <div class="p-2">
+                      <!-- Course Meta -->
+                      <div
+                        class="flex justify-between items-center gap-4 mb-2 text-sm bg-gray-200 rounded-lg py-2 px-4"
+                      >
+                        <div class="flex items-center gap-1">
+                          <svg
+                            class="w-4 h-4 text-green-500"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                            />
+                          </svg>
+                          <span>Batch 25</span>
+                        </div>
+                        <div class="flex items-center gap-1">
+                          <svg
+                            class="w-4 h-4 text-green-500"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                            />
+                          </svg>
+                          <span>Total Seat 180</span>
+                        </div>
+                        <div class="bg-white p-1 rounded-lg">
+                          <span>Upcoming</span>
+                        </div>
+                      </div>
+                      <h3 class="text-lg font-bold mb-2">SQA: Manual & Automated Testing</h3>
+                      <div class="flex px-4 items-center gap-2 text-gray-600 cursor-pointer" id="datePickerContainer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <input type="text" id="datePicker" class="text-gray-600 bg-transparent cursor-pointer" readonly>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="flex justify-center mt-auto py-4">
+                    <button
+                      class="px-4 py-2 bg-[#d8ffd8] rounded-lg hover:bg-[#c8f5c8] transition"
+                    >
+                      বিস্তারিত দেখি →
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 bg-white rounded-xl shadow-lg overflow-hidden flex flex-col justify-between h-96"
+                >
+                  <div>
+                    <div class="relative p-2">
+                      <img
+                        src="/assests/sqa.png"
+                        alt="SQA Course"
+                        class="w-full h-40 rounded-lg object-cover"
+                      />
+                    </div>
+                    <div class="p-2">
+                      <!-- Course Meta -->
+                      <div
+                        class="flex justify-between items-center gap-4 mb-2 text-sm bg-gray-200 rounded-lg py-2 px-4"
+                      >
+                        <div class="flex items-center gap-1">
+                          <svg
+                            class="w-4 h-4 text-green-500"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                            />
+                          </svg>
+                          <span>Batch 25</span>
+                        </div>
+                        <div class="flex items-center gap-1">
+                          <svg
+                            class="w-4 h-4 text-green-500"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                            />
+                          </svg>
+                          <span>Total Seat 180</span>
+                        </div>
+                        <div class="bg-white p-1 rounded-lg">
+                          <span>Upcoming</span>
+                        </div>
+                      </div>
+                      <h3 class="text-lg font-bold mb-2">SQA: Manual & Automated Testing</h3>
+                      <div class="flex px-4 items-center gap-2 text-gray-600 cursor-pointer" id="datePickerContainer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <input type="text" id="datePicker" class="text-gray-600 bg-transparent cursor-pointer" readonly>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="flex justify-center mt-auto py-4">
+                    <button
+                      class="px-4 py-2 bg-[#d8ffd8] rounded-lg hover:bg-[#c8f5c8] transition"
+                    >
+                      বিস্তারিত দেখি →
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 bg-white rounded-xl shadow-lg overflow-hidden flex flex-col justify-between h-96"
+                >
+                  <div>
+                    <div class="relative p-2">
+                      <img
+                        src="/assests/sqa.png"
+                        alt="SQA Course"
+                        class="w-full h-40 rounded-lg object-cover"
+                      />
+                    </div>
+                    <div class="p-2">
+                      <!-- Course Meta -->
+                      <div
+                        class="flex justify-between items-center gap-4 mb-2 text-sm bg-gray-200 rounded-lg py-2 px-4"
+                      >
+                        <div class="flex items-center gap-1">
+                          <svg
+                            class="w-4 h-4 text-green-500"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                            />
+                          </svg>
+                          <span>Batch 25</span>
+                        </div>
+                        <div class="flex items-center gap-1">
+                          <svg
+                            class="w-4 h-4 text-green-500"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                            />
+                          </svg>
+                          <span>Total Seat 180</span>
+                        </div>
+                        <div class="bg-white p-1 rounded-lg">
+                          <span>Upcoming</span>
+                        </div>
+                      </div>
+                      <h3 class="text-lg font-bold mb-2">SQA: Manual & Automated Testing</h3>
+                      <div class="flex px-4 items-center gap-2 text-gray-600 cursor-pointer" id="datePickerContainer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <input type="text" id="datePicker" class="text-gray-600 bg-transparent cursor-pointer" readonly>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="flex justify-center mt-auto py-4">
+                    <button
+                      class="px-4 py-2 bg-[#d8ffd8] rounded-lg hover:bg-[#c8f5c8] transition"
+                    >
+                      বিস্তারিত দেখি →
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 bg-white rounded-xl shadow-lg overflow-hidden flex flex-col justify-between h-96"
+                >
+                  <div>
+                    <div class="relative p-2">
+                      <img
+                        src="/assests/sqa.png"
+                        alt="SQA Course"
+                        class="w-full h-40 rounded-lg object-cover"
+                      />
+                    </div>
+                    <div class="p-2">
+                      <!-- Course Meta -->
+                      <div
+                        class="flex justify-between items-center gap-4 mb-2 text-sm bg-gray-200 rounded-lg py-2 px-4"
+                      >
+                        <div class="flex items-center gap-1">
+                          <svg
+                            class="w-4 h-4 text-green-500"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                            />
+                          </svg>
+                          <span>Batch 25</span>
+                        </div>
+                        <div class="flex items-center gap-1">
+                          <svg
+                            class="w-4 h-4 text-green-500"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                            />
+                          </svg>
+                          <span>Total Seat 180</span>
+                        </div>
+                        <div class="bg-white p-1 rounded-lg">
+                          <span>Upcoming</span>
+                        </div>
+                      </div>
+                      <h3 class="text-lg font-bold mb-2">SQA: Manual & Automated Testing</h3>
+                      <div class="flex px-4 items-center gap-2 text-gray-600 cursor-pointer" id="datePickerContainer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <input type="text" id="datePicker" class="text-gray-600 bg-transparent cursor-pointer" readonly>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="flex justify-center mt-auto py-4">
+                    <button
+                      class="px-4 py-2 bg-[#d8ffd8] rounded-lg hover:bg-[#c8f5c8] transition"
+                    >
+                      বিস্তারিত দেখি →
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 bg-white rounded-xl shadow-lg overflow-hidden flex flex-col justify-between h-96"
+                >
+                  <div>
+                    <div class="relative p-2">
+                      <img
+                        src="/assests/sqa.png"
+                        alt="SQA Course"
+                        class="w-full h-40 rounded-lg object-cover"
+                      />
+                    </div>
+                    <div class="p-2">
+                      <!-- Course Meta -->
+                      <div
+                        class="flex justify-between items-center gap-4 mb-2 text-sm bg-gray-200 rounded-lg py-2 px-4"
+                      >
+                        <div class="flex items-center gap-1">
+                          <svg
+                            class="w-4 h-4 text-green-500"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                            />
+                          </svg>
+                          <span>Batch 25</span>
+                        </div>
+                        <div class="flex items-center gap-1">
+                          <svg
+                            class="w-4 h-4 text-green-500"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                            />
+                          </svg>
+                          <span>Total Seat 180</span>
+                        </div>
+                        <div class="bg-white p-1 rounded-lg">
+                          <span>Upcoming</span>
+                        </div>
+                      </div>
+                      <h3 class="text-lg font-bold mb-2">SQA: Manual & Automated Testing</h3>
+                      <div class="flex px-4 items-center gap-2 text-gray-600 cursor-pointer" id="datePickerContainer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <input type="text" id="datePicker" class="text-gray-600 bg-transparent cursor-pointer" readonly>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="flex justify-center mt-auto py-4">
+                    <button
+                      class="px-4 py-2 bg-[#d8ffd8] rounded-lg hover:bg-[#c8f5c8] transition"
+                    >
+                      বিস্তারিত দেখি →
+                    </button>
+                  </div>
+                </div>
+
+          
+                <!-- Add similar cards here... -->
+              </div>
+            </div>
+          </div>
 
      </div>
 
@@ -1629,5 +1858,28 @@
         fp.open();
     });
 </script>
+
+<script>
+    const slider = document.getElementById("slider");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    let currentIndex = 0;
+    const cardWidth = slider.children[0].offsetWidth + 16; // Card width + margin
+
+    prevBtn.addEventListener("click", () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+      }
+    });
+
+    nextBtn.addEventListener("click", () => {
+      if (currentIndex < slider.children.length - 3) {
+        currentIndex++;
+        slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+      }
+    });
+  </script>
 </body>
 </html>
