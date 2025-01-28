@@ -7,6 +7,8 @@
    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
    <script src="https://cdn.tailwindcss.com"></script>
 
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+
    <!-- font awesome  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -31,6 +33,9 @@
     }
 </script>
    <style>
+      .bangla-font {
+            font-family: 'Noto Sans Bengali', sans-serif;
+        }
      .menu-slide {
         transform: translateX(100%);
         transition: transform 0.3s ease;
@@ -689,42 +694,42 @@
      </div>
       
   <!-- 5th testimonial -->
-<div class="bg-navy">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <!-- Header with Navigation Buttons -->
-    <div class="text-center mb-16 relative">
-      <!-- Top Navigation Buttons -->
-      <div id="testimonial-nav" class="absolute right-0 top-0 flex gap-2">
-        <button id="prev-btn" class="bg-white p-2 rounded-lg disabled:opacity-50 disabled:pointer-events-none">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button id="next-btn" class="bg-white hover:bg-white/20 transition-colors p-2 rounded-lg disabled:opacity-50 disabled:pointer-events-none">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      </div>
+  <div class="bg-navy">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <!-- Header with Navigation Buttons -->
+        <div class="text-center mb-16 relative">
+            <!-- Top Navigation Buttons -->
+            <div id="testimonial-nav" class="absolute right-0 top-0 flex gap-2">
+                <button id="prev-btn" class="bg-white p-2 rounded-lg disabled:opacity-50 disabled:pointer-events-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="next-btn" class="bg-white hover:bg-white/20 transition-colors p-2 rounded-lg disabled:opacity-50 disabled:pointer-events-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
 
-      <!-- Header Content -->
-      <div class="flex items-center justify-center gap-2 mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="#00f200">
-          <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />
-        </svg>
-        <h2 class="text-xl font-bold text-accent">ফিডব্যাক</h2>
-      </div>
-      <h1 class="text-4xl font-bold text-white mb-3">আমাদের লার্নারদের কাছে শুনুন</h1>
-      <p class="text-xl text-gray-300 max-w-lg mx-auto">
-        Hear what our students say about their experience
-      </p>
-    </div>
-    
-            <!-- Testimonials Section -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Header Content -->
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="#00f200">
+                    <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />
+                </svg>
+                <h2 class="text-xl font-bold text-accent">ফিডব্যাক</h2>
+            </div>
+            <h1 class="text-4xl font-bold text-white mb-3 bangla-font">আমাদের লার্নারদের কাছে শুনুন</h1>
+            <p class="text-xl text-gray-300 max-w-lg mx-auto">
+                Hear what our students say about their experience
+            </p>
+        </div>
+        
+        <!-- Testimonials Carousel -->
+        <div id="testimonial-carousel" class="overflow-hidden pt-[20px]">
+            <div id="carousel-inner" class="flex gap-2 transition-transform duration-300 ease-in-out">
                 <!-- Card 1 -->
-                <div class="bg-white rounded-[2rem] p-8 relative">
-                    <!-- Rating Stars -->
+                <div class="bg-white rounded-[2rem] p-8 relative flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
                     <div class="inline-flex gap-0.5 px-2 py-1 bg-[#22c55e] rounded-md absolute -top-3 left-1/2 -translate-x-1/2">
                         <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
@@ -742,16 +747,10 @@
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                         </svg>
                     </div>
-    
-                    <!-- Testimonial Text -->
                     <img src="/assests/img_1.png" alt="" class="w-8 h-6">
                     <div class="relative mb-8 mt-4">
-                          
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed tincidunt velit. Donec bibendum turpis vitae maximus bibendum.
-                       
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed tincidunt velit. Donec bibendum turpis vitae maximus bibendum.
                     </div>
-    
-                    <!-- Author Info -->
                     <div class="flex items-center">
                         <img src="/assests/feedback/r2.png" alt="Teddy Yu" class="w-12 h-12 rounded-full mr-4">
                         <div>
@@ -760,10 +759,9 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Card 2 -->
-                <div class="bg-white rounded-[2rem] p-8 relative">
-                    <!-- Rating Stars -->
+                <div class="bg-white rounded-[2rem] p-8 relative flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
                     <div class="inline-flex gap-0.5 px-2 py-1 bg-[#22c55e] rounded-md absolute -top-3 left-1/2 -translate-x-1/2">
                         <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
@@ -781,28 +779,21 @@
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                         </svg>
                     </div>
-    
-                    <!-- Testimonial Text -->
                     <img src="/assests/img_1.png" alt="" class="w-8 h-6">
                     <div class="relative mb-8 mt-4">
-                          
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed tincidunt velit. Donec bibendum turpis vitae maximus bibendum.
-                       
+                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
                     </div>
-    
-                    <!-- Author Info -->
                     <div class="flex items-center">
-                        <img src="/assests/feedback/r1.png" alt="Mariana Napolitani" class="w-12 h-12 rounded-full mr-4">
+                        <img src="/assests/feedback/r1.png" alt="Jane Doe" class="w-12 h-12 rounded-full mr-4">
                         <div>
-                            <h4 class="font-bold text-gray-900">Mariana Napolitani</h4>
-                            <p class="text-gray-600">Creative Director</p>
+                            <h4 class="font-bold text-gray-900">Jane Doe</h4>
+                            <p class="text-gray-600">Web Developer: Batch 3</p>
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Card 3 -->
-                <div class="bg-white rounded-[2rem] p-8 relative">
-                    <!-- Rating Stars -->
+                <div class="bg-white rounded-[2rem] p-8 relative flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
                     <div class="inline-flex gap-0.5 px-2 py-1 bg-[#22c55e] rounded-md absolute -top-3 left-1/2 -translate-x-1/2">
                         <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
@@ -820,37 +811,59 @@
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                         </svg>
                     </div>
-    
-                    <!-- Testimonial Text -->
                     <img src="/assests/img_1.png" alt="" class="w-8 h-6">
                     <div class="relative mb-8 mt-4">
-                          
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed tincidunt velit. Donec bibendum turpis vitae maximus bibendum.
-                       
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
-    
-                    <!-- Author Info -->
                     <div class="flex items-center">
-                        <img src="/assests/feedback/r3.png" alt="Jamie Chastain" class="w-12 h-12 rounded-full mr-4">
+                        <img src="/assests/feedback/r3.png" alt="John Smith" class="w-12 h-12 rounded-full mr-4">
                         <div>
-                            <h4 class="font-bold text-gray-900">Jamie Chastain</h4>
-                            <p class="text-gray-600">Sales Manager</p>
+                            <h4 class="font-bold text-gray-900">John Smith</h4>
+                            <p class="text-gray-600">Data Scientist: Batch 7</p>
                         </div>
                     </div>
                 </div>
-              
-            </div>
-    
-            <!-- Pagination Dots -->
-            <div class="flex justify-center gap-2 mt-8">
-                <button class="w-2 h-2 rounded-full bg-accent"></button>
-                <button class="w-2 h-2 rounded-full bg-white/20"></button>
-                <button class="w-2 h-2 rounded-full bg-white/20"></button>
-                <button class="w-2 h-2 rounded-full bg-white/20"></button>
-                <button class="w-2 h-2 rounded-full bg-white/20"></button>
+                <!-- Card 3 -->
+                <div class="bg-white rounded-[2rem] p-8 relative flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
+                    <div class="inline-flex gap-0.5 px-2 py-1 bg-[#22c55e] rounded-md absolute -top-3 left-1/2 -translate-x-1/2">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <img src="/assests/img_1.png" alt="" class="w-8 h-6">
+                    <div class="relative mb-8 mt-4">
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div class="flex items-center">
+                        <img src="/assests/feedback/r3.png" alt="John Smith" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900">John Smith</h4>
+                            <p class="text-gray-600">Data Scientist: Batch 7</p>
+                        </div>
+                    </div>
+                </div>
+               
             </div>
         </div>
+
+        <!-- Pagination Dots -->
+        <div id="pagination" class="flex justify-center gap-2 mt-8">
+            <!-- Dots will be dynamically added here -->
+        </div>
     </div>
+</div>
 
 
     <!-- 6th upocoming live courses  -->
@@ -1902,6 +1915,79 @@
 
     closeMenuBtn.addEventListener('click', () => {
         mobileMenu.classList.remove('open');
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const carousel = document.getElementById('carousel-inner');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const pagination = document.getElementById('pagination');
+        const slides = carousel.children;
+        let currentIndex = 0;
+
+        function getVisibleSlides() {
+            if (window.innerWidth >= 1024) return 3; // Desktop
+            if (window.innerWidth >= 768) return 2; // Tablet
+            return 1; // Mobile
+        }
+
+        function updateCarousel() {
+            const visibleSlides = getVisibleSlides();
+            const totalSlides = slides.length;
+            const maxIndex = totalSlides - visibleSlides;
+
+            if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+            const offset = -(currentIndex * 100 / visibleSlides);
+            carousel.style.transform = `translateX(${offset}%)`;
+
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex === maxIndex;
+
+            updatePagination(visibleSlides, totalSlides);
+        }
+
+        function updatePagination(visibleSlides, totalSlides) {
+            pagination.innerHTML = '';
+            const dotCount = Math.max(1, totalSlides - visibleSlides + 1);
+
+            for (let i = 0; i < dotCount; i++) {
+                const dot = document.createElement('button');
+                dot.classList.add('w-2', 'h-2', 'rounded-full', 'transition-all', 'duration-300');
+                if (i === currentIndex) {
+                    dot.classList.add('bg-[#00C853]', 'w-8');
+                } else {
+                    dot.classList.add('bg-white/20');
+                }
+                dot.addEventListener('click', () => {
+                    currentIndex = i;
+                    updateCarousel();
+                });
+                pagination.appendChild(dot);
+            }
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            const visibleSlides = getVisibleSlides();
+            if (currentIndex < slides.length - visibleSlides) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+
+        window.addEventListener('resize', updateCarousel);
+
+        // Initialize
+        updateCarousel();
     });
 </script>
 </body>
