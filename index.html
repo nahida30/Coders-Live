@@ -76,68 +76,68 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Left side -->
-                <div class="flex items-center">
-                    <img src="/assests/logo.png" alt="CODERS Logo" class="h-10">
-                    
-                    <!-- Search bar - hidden on mobile -->
-                    <div class="hidden md:flex items-center ml-8">
-                        <div class="relative">
-                            <input type="text" placeholder="কোর্স সার্চ করুন" 
-                                class="w-[300px] pl-10 pr-4 py-2 border border-gray-300 rounded-full text-sm focus:outline-none focus:border-green-500">
-                            <div class="absolute left-3 top-2.5">
-                                <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                                </svg>
-                            </div>
+<nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- Left side -->
+            <div class="flex items-center">
+                <img src="/assests/logo.png" alt="CODERS Logo" class="h-10">
+                
+                <!-- Search bar - Visible on tablets & desktops -->
+                <div class="hidden sm:flex items-center ml-4 md:ml-8">
+                    <div class="relative">
+                        <input type="text" placeholder="কোর্স সার্চ করুন" 
+                            class="w-[200px] md:w-[300px] pl-10 pr-4 py-2 border border-gray-300 rounded-full text-sm focus:outline-none focus:border-green-500">
+                        <div class="absolute left-3 top-2.5">
+                            <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
                         </div>
                     </div>
                 </div>
-    
-                <!-- Right side -->
-                <div class="flex items-center">
-                    <!-- Mobile menu button -->
-                    <button id="mobile-menu-btn" type="button" class="md:hidden bg-white p-2 rounded-md">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                    </button>
-    
-                    <!-- Desktop menu -->
-                    <div class="hidden md:flex items-center space-x-8">
-                        <a href="#" class="text-gray-700 hover:text-green-600">ফ্রী কোর্স</a>
-                        <a href="/Blog.html" class="text-gray-700 hover:text-green-600">ব্লগ</a>
-                        <a href="#" class="text-gray-700 hover:text-green-600">সব কোর্স</a>
-                        <a href="/auth/login.html" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700">
-                            লগিন / সাইনআপ
-                        </a>
-                    </div>
+            </div>
+
+            <!-- Right side -->
+            <div class="flex items-center">
+                <!-- Mobile menu button (visible on tablets & mobile) -->
+                <button id="mobile-menu-btn" type="button" class="sm:hidden bg-white p-2 rounded-md">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+
+                <!-- Tablet & Desktop Menu -->
+                <div class="hidden sm:flex items-center space-x-6 md:space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-green-600">ফ্রী কোর্স</a>
+                    <a href="/Blog.html" class="text-gray-700 hover:text-green-600">ব্লগ</a>
+                    <a href="#" class="text-gray-700 hover:text-green-600">সব কোর্স</a>
+                    <a href="/auth/login.html" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700">
+                        লগিন / সাইনআপ
+                    </a>
                 </div>
             </div>
         </div>
-    
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="menu-slide bg-white fixed top-0 right-0 bottom-0 w-2/3 z-50 p-4 md:hidden">
-            <div class="flex justify-end">
-                <button id="close-menu-btn" class="text-gray-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                    </svg>
-                </button>
-            </div>
-            <div class="space-y-6 mt-10">
-                <a href="#" class="text-gray-700 hover:text-green-600 block">ফ্রী কোর্স</a>
-                <a href="/Blog.html" class="text-gray-700 hover:text-green-600 block">ব্লগ</a>
-                <a href="#" class="text-gray-700 hover:text-green-600 block">সব কোর্স</a>
-                <a href="/auth/login.html" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 block">
-                    লগিন / সাইনআপ
-                </a>
-            </div>
+    </div>
+
+    <!-- Mobile & Tablet Menu -->
+    <div id="mobile-menu" class="hidden bg-white fixed top-0 right-0 bottom-0 w-2/3 z-50 p-4 sm:hidden">
+        <div class="flex justify-end">
+            <button id="close-menu-btn" class="text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
         </div>
-    </nav>
+        <div class="space-y-6 mt-10">
+            <a href="#" class="text-gray-700 hover:text-green-600 block">ফ্রী কোর্স</a>
+            <a href="/Blog.html" class="text-gray-700 hover:text-green-600 block">ব্লগ</a>
+            <a href="#" class="text-gray-700 hover:text-green-600 block">সব কোর্স</a>
+            <a href="/auth/login.html" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 block">
+                লগিন / সাইনআপ
+            </a>
+        </div>
+    </div>
+</nav>
 
     <!-- Hero Section -->
    <div class="bg-[#d0feff]">
@@ -191,39 +191,39 @@
    </div>
 
     <!--1st Features Section -->
-    <div class="bg-green-600 py-6">
+    <div class="bg-[#1f8d16] py-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Feature 1 -->
-            <button class="bg-[#29A745] text-white flex items-start rounded-xl p-6 shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:bg-[#218838] focus:outline-none">
+            <button class="text-white flex items-start rounded-xl p-6 shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:opacity-90 focus:outline-none" style="background: linear-gradient(180deg, #00ad19, #1f8d16); border: 2px solid #56b65d;">
               <div class="text-white mr-4">
                 <img src="/assests/index_page/hero1.svg" alt="industry">
               </div>
-              <h3 class="text-[16px] font-semibold text-left">ইন্ডাস্ট্রি ফোকাসড লাইভ কোর্সেস</h3>
+              <h3 class="text-[20px] font-semibold text-left">ইন্ডাস্ট্রি ফোকাসড লাইভ কোর্সেস</h3>
             </button>
       
             <!-- Feature 2 -->
-            <button class="bg-[#29A745] text-white flex items-start rounded-xl p-6 shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:bg-[#218838] focus:outline-none">
+            <button class="text-white flex items-start rounded-xl p-6 shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:opacity-90 focus:outline-none" style="background: linear-gradient(180deg, #00ad19, #1f8d16); border: 2px solid #56b65d;">
               <div class="text-white mr-4">
                 <img src="/assests/index_page/hero2.svg" alt="module">
               </div>
-              <h3 class="text-[16px] font-semibold text-left">মডিউল ভিত্তিক স্টাডি প্ল্যান</h3>
+              <h3 class="text-[20px] font-semibold text-left">মডিউল ভিত্তিক স্টাডি প্ল্যান</h3>
             </button>
       
             <!-- Feature 3 -->
-            <button class="bg-[#29A745] text-white flex items-start rounded-xl p-6 shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:bg-[#218838] focus:outline-none">
+            <button class="text-white flex items-start rounded-xl p-6 shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:opacity-90 focus:outline-none" style="background: linear-gradient(180deg, #00ad19, #1f8d16); border: 2px solid #56b65d;">
               <div class="text-white mr-4">
                 <img src="/assests/index_page/hero3.svg" alt="expert-live-class">
               </div>
-              <h3 class="text-[16px] font-semibold text-left">এক্সপার্টদের থেকে লাইভে শিখুন</h3>
+              <h3 class="text-[20px] font-semibold text-left">এক্সপার্টদের থেকে লাইভে শিখুন</h3>
             </button>
       
             <!-- Feature 4 -->
-            <button class="bg-[#29A745] text-white flex items-start rounded-xl p-6 shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:bg-[#218838] focus:outline-none">
+            <button class="text-white flex items-start rounded-xl p-6 shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:opacity-90 focus:outline-none" style="background: linear-gradient(180deg, #00ad19, #1f8d16); border: 2px solid #56b65d;">
               <div class="text-white mr-4">
                 <img src="/assests/index_page/hero4.svg" alt="job-placement">
               </div>
-              <h3 class="text-[16px] font-semibold text-left">ইন্টেন্সিভ জব প্লেসমেন্ট সাপোর্ট</h3>
+              <h3 class="text-[20px] font-semibold text-left">ইন্টেন্সিভ জব প্লেসমেন্ট সাপোর্ট</h3>
             </button>
           </div>
         </div>
@@ -351,16 +351,15 @@
                             <!-- Course Meta -->
                             <div class="flex justify-between px-4 items-center gap-4 mb-4 text-sm w-full bg-gray-200 rounded-lg transition-colors py-2">
                                 <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    <span>Batch 25</span>
+                                    <img src="/assests/icon/play.png" alt="play-icon" class="h-4 w-4">
+                                    <span class="mt-1">Batch 25</span>
                                 </div>
                                 <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <!-- <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                                    </svg>
-                                    <span>Total Seat 180</span>
+                                    </svg> -->
+                                    <img src="/assests/icon/users.png" alt="user-icon" class="h-5 w-5">
+                                    <span class="mt-1">Total Seat 180</span>
                                 </div>
                                 <div class="flex bg-white p-1 rounded-lg items-center gap-1">
                                     <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -402,17 +401,14 @@
                             <!-- Course Meta -->
                             <div class="flex justify-between px-4 items-center gap-4 mb-4 text-sm w-full bg-gray-200 rounded-lg transition-colors py-2">
                                 <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    <span>Batch 25</span>
+                                    <img src="/assests/icon/play.png" alt="play-icon" class="h-4 w-4">
+                                    <span class="mt-1">Batch 25</span>
                                 </div>
                                 <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                                    </svg>
-                                    <span>Total Seat 180</span>
+                                    <img src="/assests/icon/clock.png" alt="clock-icon" class="h-5 w-5">
+                                    <span class="mt-1">120 hours</span>
                                 </div>
+                                
                                 <div class="flex items-center gap-1">
                                   
                                     <div class="flex bg-white p-1 rounded-lg items-center gap-0.5">
@@ -458,16 +454,12 @@
                             <!-- Course Meta -->
                             <div class="flex justify-between px-4 items-center gap-4 mb-4 text-sm w-full bg-gray-200 rounded-lg transition-colors py-2">
                                 <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    <span>Batch 25</span>
+                                    <img src="/assests/icon/play.png" alt="play-icon" class="h-4 w-4">
+                                    <span class="mt-1">Batch 25</span>
                                 </div>
                                 <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                                    </svg>
-                                    <span>Total Seat 180</span>
+                                    <img src="/assests/icon/users.png" alt="user-icon" class="h-5 w-5">
+                                    <span class="mt-1">Total Seat 180</span>
                                 </div>
                                 <div class="flex items-center gap-1">
                                   
@@ -525,17 +517,14 @@
                             <!-- Course Meta -->
                             <div class="flex justify-between px-4 items-center gap-4 mb-4 text-sm w-full bg-gray-200 rounded-lg transition-colors py-2">
                                 <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    <span>Batch 25</span>
+                                    <img src="/assests/icon/play.png" alt="play-icon" class="h-4 w-4">
+                                    <span class="mt-1">Batch 25</span>
                                 </div>
                                 <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                                    </svg>
-                                    <span>Total Seat 180</span>
+                                    <img src="/assests/icon/clock.png" alt="clock-icon" class="h-5 w-5">
+                                    <span class="mt-1">120 hours</span>
                                 </div>
+                                
                                 <div class="flex items-center gap-1">
                                   
                                     <div class="flex bg-white p-1 rounded-lg items-center gap-0.5">
@@ -581,17 +570,14 @@
                             <!-- Course Meta -->
                             <div class="flex justify-between px-4 items-center gap-4 mb-4 text-sm w-full bg-gray-200 rounded-lg transition-colors py-2">
                                 <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    <span>Batch 25</span>
+                                    <img src="/assests/icon/play.png" alt="play-icon" class="h-4 w-4">
+                                    <span class="mt-1">Batch 25</span>
                                 </div>
                                 <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                                    </svg>
-                                    <span>Total Seat 180</span>
+                                    <img src="/assests/icon/clock.png" alt="clock-icon" class="h-5 w-5">
+                                    <span class="mt-1">120 hours</span>
                                 </div>
+                                
                                 <div class="flex items-center gap-1">
                                   
                                     <div class="flex bg-white p-1 rounded-lg items-center gap-0.5">
@@ -636,17 +622,21 @@
                             <!-- Course Meta -->
                             <div class="flex justify-between px-4 items-center gap-4 mb-4 text-sm w-full bg-gray-200 rounded-lg transition-colors py-2">
                                 <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <!-- <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    <span>Batch 25</span>
+                                    </svg> -->
+                                    <img src="/assests/icon/play.png" alt="play-icon" class="h-4 w-4">
+                                    <span class="mt-1">Batch 25</span>
                                 </div>
                                 <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                                    </svg>
-                                    <span>Total Seat 180</span>
+                                    <!-- <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6h4"></path>
+                                        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"></circle>
+                                    </svg> -->
+                                    <img src="/assests/icon/clock.png" alt="clock-icon" class="h-5 w-5">
+                                    <span class="mt-1">120 hours</span>
                                 </div>
+                                
                                 <div class="flex items-center gap-1">
                                   
                                     <div class="flex bg-white p-1 rounded-lg items-center gap-0.5">
@@ -687,7 +677,7 @@
         
 
         <div class="flex justify-center mt-auto py-12">
-            <button class="w-96 border-solid border-1 border-gray-400 ... py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
+            <button class="w-96 border-solid border-1 border-[#d9d9d9] ... py-2 bg-[#eaecf0] rounded-lg hover:bg-gray-300 transition-colors">
                 সব কোর্স দেখুন  →
             </button>
         </div>
@@ -952,8 +942,8 @@
                           <span>Upcoming</span>
                         </div>
                       </div>
-                      <h3 class="text-lg font-bold mb-2">SQA: Manual & Automated Testing</h3>
-                      <div class="flex px-4 items-center gap-2 text-gray-600 cursor-pointer" id="datePickerContainer">
+                      <h3 class="text-lg font-bold mb-2 mx-2">SQA: Manual & Automated Testing</h3>
+                      <div class="flex mx-2 items-center gap-2 text-gray-600 cursor-pointer" id="datePickerContainer">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
@@ -963,7 +953,7 @@
                   </div>
                   <div class="flex justify-center mt-auto py-4">
                     <button
-                      class="px-4 py-2 bg-[#d8ffd8] rounded-lg hover:bg-[#c8f5c8] transition"
+                      class="w-full mx-2 py-2 bg-[#d8ffd8] border border-[#37c760] rounded-lg hover:bg-[#c8f5c8] transition"
                     >
                       বিস্তারিত দেখি →
                     </button>
@@ -1022,8 +1012,8 @@
                           <span>Upcoming</span>
                         </div>
                       </div>
-                      <h3 class="text-lg font-bold mb-2">SQA: Manual & Automated Testing</h3>
-                      <div class="flex px-4 items-center gap-2 text-gray-600 cursor-pointer" id="datePickerContainer">
+                      <h3 class="text-lg font-bold mb-2 mx-2">SQA: Manual & Automated Testing</h3>
+                      <div class="flex mx-2 items-center gap-2 text-gray-600 cursor-pointer" id="datePickerContainer">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
@@ -1033,15 +1023,16 @@
                   </div>
                   <div class="flex justify-center mt-auto py-4">
                     <button
-                      class="px-4 py-2 bg-[#d8ffd8] rounded-lg hover:bg-[#c8f5c8] transition"
-                    >
+                    class="w-full mx-2 py-2 bg-[#d8ffd8] border border-[#37c760] rounded-lg hover:bg-[#c8f5c8] transition"
+                  >
                       বিস্তারিত দেখি →
                     </button>
                   </div>
                 </div>
 
+
                 <div
-                  class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 bg-white rounded-xl  overflow-hidden flex flex-col justify-between h-96"
+                  class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 bg-white rounded-xl overflow-hidden flex flex-col justify-between h-96"
                 >
                   <div>
                     <div class="relative p-2">
@@ -1054,7 +1045,7 @@
                     <div class="p-2">
                       <!-- Course Meta -->
                       <div
-                        class="flex justify-between items-center gap-4 mb-2 text-sm  rounded-lg py-2 px-4"
+                        class="flex justify-between items-center gap-4 mb-2 text-sm bg-gray-200 rounded-lg py-2 px-4"
                       >
                         <div class="flex items-center gap-1">
                           <svg
@@ -1092,8 +1083,8 @@
                           <span>Upcoming</span>
                         </div>
                       </div>
-                      <h3 class="text-lg font-bold mb-2">SQA: Manual & Automated Testing</h3>
-                      <div class="flex px-4 items-center gap-2 text-gray-600 cursor-pointer" id="datePickerContainer">
+                      <h3 class="text-lg font-bold mb-2 mx-2">SQA: Manual & Automated Testing</h3>
+                      <div class="flex mx-2 items-center gap-2 text-gray-600 cursor-pointer" id="datePickerContainer">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
@@ -1103,8 +1094,8 @@
                   </div>
                   <div class="flex justify-center mt-auto py-4">
                     <button
-                      class="px-4 py-2 bg-[#d8ffd8] rounded-lg hover:bg-[#c8f5c8] transition"
-                    >
+                    class="w-full mx-2 py-2 bg-[#d8ffd8] border border-[#37c760] rounded-lg hover:bg-[#c8f5c8] transition"
+                  >
                       বিস্তারিত দেখি →
                     </button>
                   </div>
@@ -1162,8 +1153,8 @@
                           <span>Upcoming</span>
                         </div>
                       </div>
-                      <h3 class="text-lg font-bold mb-2">SQA: Manual & Automated Testing</h3>
-                      <div class="flex px-4 items-center gap-2 text-gray-600 cursor-pointer" id="datePickerContainer">
+                      <h3 class="text-lg font-bold mb-2 mx-2">SQA: Manual & Automated Testing</h3>
+                      <div class="flex mx-2 items-center gap-2 text-gray-600 cursor-pointer" id="datePickerContainer">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
@@ -1173,78 +1164,8 @@
                   </div>
                   <div class="flex justify-center mt-auto py-4">
                     <button
-                      class="px-4 py-2 bg-[#d8ffd8] rounded-lg hover:bg-[#c8f5c8] transition"
-                    >
-                      বিস্তারিত দেখি →
-                    </button>
-                  </div>
-                </div>
-
-                <div
-                  class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 bg-white rounded-xl overflow-hidden flex flex-col justify-between h-96"
-                >
-                  <div>
-                    <div class="relative p-2">
-                      <img
-                        src="/assests/sqa.png"
-                        alt="SQA Course"
-                        class="w-full h-40 rounded-lg object-cover"
-                      />
-                    </div>
-                    <div class="p-2">
-                      <!-- Course Meta -->
-                      <div
-                        class="flex justify-between items-center gap-4 mb-2 text-sm bg-gray-200 rounded-lg py-2 px-4"
-                      >
-                        <div class="flex items-center gap-1">
-                          <svg
-                            class="w-4 h-4 text-green-500"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                            />
-                          </svg>
-                          <span>Batch 25</span>
-                        </div>
-                        <div class="flex items-center gap-1">
-                          <svg
-                            class="w-4 h-4 text-green-500"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-                            />
-                          </svg>
-                          <span>Total Seat 180</span>
-                        </div>
-                        <div class="bg-white p-1 rounded-lg">
-                          <span>Upcoming</span>
-                        </div>
-                      </div>
-                      <h3 class="text-lg font-bold mb-2">SQA: Manual & Automated Testing</h3>
-                      <div class="flex px-4 items-center gap-2 text-gray-600 cursor-pointer" id="datePickerContainer">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                        <input type="text" id="datePicker" class="text-gray-600 bg-transparent cursor-pointer" readonly>
-                    </div>
-                    </div>
-                  </div>
-                  <div class="flex justify-center mt-auto py-4">
-                    <button
-                      class="px-4 py-2 bg-[#d8ffd8] rounded-lg hover:bg-[#c8f5c8] transition"
-                    >
+                    class="w-full mx-2 py-2 bg-[#d8ffd8] border border-[#37c760] rounded-lg hover:bg-[#c8f5c8] transition"
+                  >
                       বিস্তারিত দেখি →
                     </button>
                   </div>
@@ -1278,7 +1199,7 @@
            <!-- Card 1 -->
            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-16">
             <div class="bg-blue-500 aspect-square  flex items-center justify-center ">
-                <img src="/assests/index_page/34.png" alt="Student with folder" class="h-[353px] object-contain absolute mt-[-50px] z-0">
+                <img src="/assests/index_page/34.png" alt="Student with folder" class="mt-[40px] md:mt-[-13px] lg:mt-[-50px] h-[353px] object-contain absolute z-0">
             </div>
             <div class="p-4">
                 <p class="text-gray-500 text-sm">Instructor</p>
@@ -1294,7 +1215,7 @@
             <!-- Karen Barnes Card -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-16">
                 <div class="bg-blue-500 aspect-square  flex items-center justify-center ">
-                    <img src="/assests/index_page/Demo-1-Slider-Image-G.png" alt="Student with folder" class="h-[353px] object-contain absolute mt-[-50px] z-0">
+                    <img src="/assests/index_page/Demo-1-Slider-Image-G.png" alt="Student with folder" class="mt-[40px] md:mt-[-13px] lg:mt-[-50px] h-[353px] object-contain absolute z-0">
                 </div>
                 <div class="p-4">
                     <p class="text-gray-500 text-sm">Instructor</p>
@@ -1310,7 +1231,7 @@
             <!-- Anthony Wade Card -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-16">
                 <div class="bg-blue-500 aspect-square  flex items-center justify-center ">
-                    <img src="/assests/index_page/Demo-1-Slider-Image-B.png" alt="Student with folder" class="h-[353px] object-contain absolute mt-[-50px] z-0">
+                    <img src="/assests/index_page/Demo-1-Slider-Image-B.png" alt="Student with folder" class="mt-[40px] md:mt-[-13px] lg:mt-[-50px] h-[353px] object-contain absolute z-0">
                 </div>
                 <div class="p-4">
                     <p class="text-gray-500 text-sm">Instructor</p>
@@ -1326,7 +1247,7 @@
             <!-- Mario Fleming Card -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-16">
                 <div class="bg-blue-500 aspect-square  flex items-center justify-center ">
-                    <img src="/assests/index_page/Image-4.png" alt="Student with folder" class="h-[353px] object-contain absolute mt-[-50px] z-0">
+                    <img src="/assests/index_page/Image-4.png" alt="Student with folder" class="mt-[40px] md:mt-[-13px] lg:mt-[-50px] h-[353px] object-contain absolute z-0">
                 </div>
                 <div class="p-4">
                     <p class="text-gray-500 text-sm">Instructor</p>
@@ -1358,7 +1279,7 @@
       </div>
 
 
-      <!-- 8th Joint Our Team -->
+      <!-- 8th Join Our Team -->
        <div class="bg-[#d0feff] py-4">
         <section class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 rounded-3xl mx-4 md:mx-8 lg:mx-auto lg:max-w-7xl">
             <div class="container mx-auto px-6 py-16 md:py-20">
@@ -1369,7 +1290,7 @@
                             <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
                             </svg>
-                            <span class="text-green-500 font-medium">Joint Our Team</span>
+                            <span class="text-green-500 font-medium">Join Our Team</span>
                         </div>
                         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                             Become an<br>instructor
@@ -1377,7 +1298,8 @@
                         <p class="text-gray-300 text-lg mb-8 max-w-lg">
                             Helping employees gain skills and providing career development often take a back seat to business priorities but workplace.
                         </p>
-                        <a href="#" class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">
+                        <a href="#" class="inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200" 
+                        style="background: linear-gradient(90deg, #1f8d16, #00ad19);">
                             Join Us
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -1392,7 +1314,7 @@
                                 <img 
                                     src="/assests/index_page/become_instructor.png" 
                                     alt="Instructor" 
-                                    class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[95%] object-cover z-10"
+                                    class="top-[59px] md:top-[-136px] lg:top-0 absolute left-1/2 transform -translate-x-1/2 w-[95%] object-cover z-10"
                                 >
                             </div>
                             
@@ -1452,38 +1374,38 @@
         <!-- Blog Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             <!-- Blog Card 1 -->
-            <div class="bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                 <img src="/assests/blog.png" alt="Blog Post" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <h2 class="text-xl font-bold text-white mb-3">একজন ক্রেতার কি রোডাই ম্যানেজার হতে পারে?</h2>
-                    <p class="text-gray-400 text-sm mb-4">প্রোগ্রামিংয়ের দুনিয়া বিগিনারদের জন্য অনেকটাই কঠিন। প্রোগ্রামিং ভাষাও থেকে কারিগরি বিষয় অনেকেই প্রোগ্রামার হতে চায়। কিন্তু ...</p>
-                    <time class="text-gray-500 text-sm">23 November 2024</time>
+                    <h2 class="text-xl font-bold text-black mb-3">একজন ক্রেতার কি রোডাই ম্যানেজার হতে পারে?</h2>
+                    <p class="text-black text-sm mb-4">প্রোগ্রামিংয়ের দুনিয়া বিগিনারদের জন্য অনেকটাই কঠিন। প্রোগ্রামিং ভাষাও থেকে কারিগরি বিষয় অনেকেই প্রোগ্রামার হতে চায়। কিন্তু ...</p>
+                    <time class="text-black text-sm">23 November 2024</time>
                 </div>
             </div>
 
             <!-- Blog Card 2 -->
-            <div class="bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                 <img src="/assests/blog.png" alt="Blog Post" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <h2 class="text-xl font-bold text-white mb-3">টেকনোলজি না জানা কেউ কি DevOps শিখতে পারবে?</h2>
-                    <p class="text-gray-400 text-sm mb-4">প্রোগ্রামিংয়ের দুনিয়া বিগিনারদের জন্য অনেকটাই কঠিন। প্রোগ্রামিং ভাষাও থেকে কারিগরি বিষয় অনেকেই প্রোগ্রামার হতে চায়। কিন্তু ...</p>
-                    <time class="text-gray-500 text-sm">23 November 2024</time>
+                    <h2 class="text-xl font-bold text-black mb-3">টেকনোলজি না জানা কেউ কি DevOps শিখতে পারবে?</h2>
+                    <p class="text-black text-sm mb-4">প্রোগ্রামিংয়ের দুনিয়া বিগিনারদের জন্য অনেকটাই কঠিন। প্রোগ্রামিং ভাষাও থেকে কারিগরি বিষয় অনেকেই প্রোগ্রামার হতে চায়। কিন্তু ...</p>
+                    <time class="text-black text-sm">23 November 2024</time>
                 </div>
             </div>
 
             <!-- Blog Card 3 -->
-            <div class="bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                 <img src="/assests/blog.png" alt="Blog Post" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <h2 class="text-xl font-bold text-white mb-3">পাইথন কি বিগিনারদের জন্য সেরা চয়েস?</h2>
-                    <p class="text-gray-400 text-sm mb-4">প্রোগ্রামিংয়ের দুনিয়া বিগিনারদের জন্য অনেকটাই কঠিন। প্রোগ্রামিং ভাষাও থেকে কারিগরি বিষয় অনেকেই প্রোগ্রামার হতে চায়। কিন্তু ...</p>
-                    <time class="text-gray-500 text-sm">23 November 2024</time>
+                    <h2 class="text-xl font-bold text-black mb-3">পাইথন কি বিগিনারদের জন্য সেরা চয়েস?</h2>
+                    <p class="text-black text-sm mb-4">প্রোগ্রামিংয়ের দুনিয়া বিগিনারদের জন্য অনেকটাই কঠিন। প্রোগ্রামিং ভাষাও থেকে কারিগরি বিষয় অনেকেই প্রোগ্রামার হতে চায়। কিন্তু ...</p>
+                    <time class="text-black text-sm">23 November 2024</time>
                 </div>
             </div>
         </div>
 
         <!-- Newsletter Section -->
-        <div class="p-8 text-center">
+        <div class="lg:p-8 text-center">
             <div class="max-w-2xl mx-auto">
                 <div class="flex items-center justify-center gap-2 mb-4">
                     <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1491,13 +1413,13 @@
                     </svg>
                     <h2 class="text-xl font-bold text-white">নিউজলেটার পেতে সাবস্ক্রাইব করুন</h2>
                 </div>
-                <div class="relative flex mx-auto items-center w-[70%]">
+                <div class="relative flex mx-auto items-center lg:w-[70%]">
                     <input 
                         type="email" 
                         placeholder="এখানে ইমেইল প্রদান লিখুন" 
-                        class="flex-1 px-4 py-2 rounded-lg text-slate-700 border border-slate-600 focus:outline-none focus:border-green-500 pr-16"
+                        class="flex-1 px-4 py-2 rounded-lg text-slate-700 border border-slate-600 text-[14px] focus:outline-none focus:border-green-500 pr-16 lg:text-[18px]"
                     >
-                    <button class="absolute right-1 top-1 bottom-1 px-4 bg-[#00ad19] hover:bg-green-600 text-white font-medium rounded-lg transition-colors duration-200 flex items-center justify-center gap-2">
+                    <button class="absolute right-1 top-1 bottom-1 px-4 bg-[#00ad19] text-[14px] hover:bg-green-600 text-white font-medium rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 lg:text-[18px]">
                         সাবস্ক্রাইব করুন
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -1717,8 +1639,8 @@
                             </div>
                             <p class="text-gray-400 mb-4">Stay in the loop and sign up for the Wardiere newsletter:</p>
                             <form class="flex items-center">
-                                <input type="email" placeholder="Enter your email" class="w-full p-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
-                                <button class="bg-purple-500 p-3 rounded-r-lg hover:bg-purple-600">
+                                <input type="email" placeholder="Enter your email" class="w-full p-3 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                <button class="bg-black p-3 ml-[-52px] h-[44px] rounded-full hover:bg-purple-600">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                                     </svg>
@@ -1880,13 +1802,14 @@
     });
 </script>
 
+<!-- 6th upocoming live courses -->
 <script>
     const slider = document.getElementById("slider");
     const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
 
     let currentIndex = 0;
-    const cardWidth = slider.children[0].offsetWidth + 16; // Card width + margin
+    const cardWidth = slider.children[0].offsetWidth + 10; // Card width + margin
 
     prevBtn.addEventListener("click", () => {
       if (currentIndex > 0) {
@@ -1903,18 +1826,18 @@
     });
   </script>
 
+<!-- JavaScript for Mobile Menu -->
 <script>
-    // Mobile menu toggle functionality
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
     const closeMenuBtn = document.getElementById('close-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
 
     mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.add('open');
+        mobileMenu.classList.toggle('hidden');
     });
 
     closeMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
+        mobileMenu.classList.add('hidden');
     });
 </script>
 
